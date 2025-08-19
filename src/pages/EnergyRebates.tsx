@@ -257,14 +257,9 @@ const EnergyRebates = () => {
               <div className="text-center md:text-left">
                 <div className="mb-4">
                   <img 
-                    src="/images/anderson-logo-mascot.png" 
+                    src="/lovable-uploads/ccc9e78e-7031-4281-aa74-3aa19945fde7.png" 
                     alt="Anderson Heating, Air & Insulation - The Paws-itive Choice" 
                     className="h-24 w-auto mx-auto md:mx-0"
-                    style={{ padding: '4px' }}
-                    onError={(e) => {
-                      console.log('Footer logo failed to load');
-                      e.currentTarget.style.display = 'none';
-                    }}
                   />
                 </div>
                 <div className="text-sm text-muted-foreground">

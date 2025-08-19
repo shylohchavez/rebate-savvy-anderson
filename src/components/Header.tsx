@@ -21,26 +21,10 @@ export const Header = () => {
           {/* Anderson Logo */}
           <div className="flex items-center">
             <img 
-              src="/images/anderson-logo-mascot.png" 
+              src="/lovable-uploads/ccc9e78e-7031-4281-aa74-3aa19945fde7.png" 
               alt="Anderson Heating, Air & Insulation - The Paws-itive Choice" 
               className="h-16 w-auto"
-              style={{ padding: '4px' }} /* Safe zone */
-              onError={(e) => {
-                console.log('Logo failed to load, using fallback');
-                const target = e.currentTarget as HTMLImageElement;
-                target.style.display = 'none';
-                const fallback = target.nextElementSibling as HTMLElement;
-                if (fallback) fallback.style.display = 'block';
-              }}
             />
-            <div className="bg-gradient-to-r from-primary to-primary-light p-3 rounded-lg shadow-medium" style={{ display: 'none' }}>
-              <div className="text-white font-bold text-xl tracking-wide">
-                Anderson
-              </div>
-              <div className="text-white text-xs font-semibold tracking-wider">
-                HEATING • AIR • INSULATION
-              </div>
-            </div>
           </div>
 
           {/* Desktop Navigation */}
