@@ -64,20 +64,16 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
           {/* Anderson Brand Mark */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-soft border border-primary/10">
-                <div className="text-center">
-                  <div className="bg-gradient-to-r from-primary to-primary-light p-4 rounded-lg shadow-medium inline-block">
-                    <div className="text-white font-bold text-3xl tracking-wide mb-1">
-                      Anderson
-                    </div>
-                    <div className="text-secondary-foreground text-sm font-semibold tracking-wider">
-                      HEATING • AIR • INSULATION
-                    </div>
-                    <div className="text-white/80 text-xs italic mt-2">
-                      "The Paws-itive Choice"
-                    </div>
-                  </div>
-                </div>
+              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-soft border border-primary/10">
+                <img 
+                  src="/lovable-uploads/c367d70b-f17b-40dd-8bc3-c5d78000a6f3.png" 
+                  alt="Anderson Heating, Air & Insulation logo (The Paws-itive Choice)" 
+                  className="h-32 w-auto mx-auto"
+                  onError={(e) => {
+                    console.log('Hero logo failed to load');
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
               </div>
             </div>
           </div>

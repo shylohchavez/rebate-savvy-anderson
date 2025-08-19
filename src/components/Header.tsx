@@ -8,15 +8,24 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           {/* Anderson Logo */}
           <div className="flex items-center">
-            <div className="bg-gradient-to-r from-primary to-primary-light p-3 rounded-lg shadow-medium">
+            <img 
+              src="/lovable-uploads/c367d70b-f17b-40dd-8bc3-c5d78000a6f3.png" 
+              alt="Anderson Heating, Air & Insulation logo (The Paws-itive Choice)" 
+              className="h-16 w-auto"
+              onError={(e) => {
+                console.log('Logo failed to load, using fallback');
+                const target = e.currentTarget as HTMLImageElement;
+                target.style.display = 'none';
+                const fallback = target.nextElementSibling as HTMLElement;
+                if (fallback) fallback.style.display = 'block';
+              }}
+            />
+            <div className="bg-gradient-to-r from-primary to-primary-light p-3 rounded-lg shadow-medium" style={{ display: 'none' }}>
               <div className="text-white font-bold text-xl tracking-wide">
                 Anderson
               </div>
               <div className="text-secondary-foreground text-xs font-semibold tracking-wider">
-                HEATING • AIR • INSULATION
-              </div>
-              <div className="text-white/80 text-xs italic">
-                "The Paws-itive Choice"
+                HEADING • AIR • INSULATION
               </div>
             </div>
           </div>

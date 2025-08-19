@@ -117,17 +117,15 @@ const Index = () => {
               {/* Anderson Logo & Contact */}
               <div className="text-center md:text-left">
                 <div className="mb-4">
-                  <div className="bg-gradient-to-r from-primary to-primary-light p-4 rounded-lg shadow-medium inline-block">
-                    <div className="text-white font-bold text-2xl tracking-wide">
-                      Anderson
-                    </div>
-                    <div className="text-secondary-foreground text-xs font-semibold tracking-wider">
-                      HEATING • AIR • INSULATION
-                    </div>
-                    <div className="text-white/80 text-xs italic mt-1">
-                      "The Paws-itive Choice"
-                    </div>
-                  </div>
+                  <img 
+                    src="/lovable-uploads/c367d70b-f17b-40dd-8bc3-c5d78000a6f3.png" 
+                    alt="Anderson Heating, Air & Insulation logo (The Paws-itive Choice)" 
+                    className="h-24 w-auto mx-auto md:mx-0"
+                    onError={(e) => {
+                      console.log('Footer logo failed to load');
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
                 </div>
                 <div className="text-sm text-muted-foreground">
                   <p className="font-semibold text-foreground mb-1">Licensed & Insured HVAC Contractor</p>
