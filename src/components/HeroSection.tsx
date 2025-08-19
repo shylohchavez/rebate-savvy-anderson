@@ -28,8 +28,8 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
             <div className="flex-shrink-0 flex justify-center lg:justify-end">
               <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-soft border border-anderson-purple/10 max-w-[200px]">
                 <img 
-                  src="/public/images/anderson-web-transparent_logo-color.png" 
-                  alt="Anderson Heating, Air & Insulation - Licensed HVAC contractors serving North Georgia" 
+                  src="/lovable-uploads/3f645390-2fd4-4f85-95af-d86e0fdb6253.png" 
+                  alt="Anderson Heating, Air & Insulation - The Paws-itive Choice" 
                   className="h-24 w-auto mx-auto"
                   style={{ padding: '6px' }} /* Safe zone */
                   onError={(e) => {
@@ -43,8 +43,8 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
 
           {/* Official Georgia Program Links */}
           <div className="bg-accent/50 border border-primary/20 rounded-lg p-4 mb-6">
-            <h3 className="font-semibold text-primary mb-3 text-sm">Official Georgia Energy Rebates Resources:</h3>
-            <div className="grid grid-cols-2 gap-2 text-sm">
+            <h3 className="font-semibold text-primary mb-3 text-sm text-center">Official Georgia Energy Rebates Resources:</h3>
+            <div className="grid grid-cols-2 gap-2 text-sm justify-items-center">
               <a 
                 href="https://energyrebates.georgia.gov/" 
                 target="_blank" 
@@ -124,7 +124,10 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
               Serving North Georgia Counties
             </div>
             <div className="text-xs text-muted-foreground">
-              46 Counties Across Georgia • Licensed & Insured
+              Gordon • Bartow • Floyd • Murray • Whitfield • Chattooga • Pickens • Cherokee • Walker
+            </div>
+            <div className="text-xs text-muted-foreground mt-1">
+              Licensed & Insured
             </div>
           </div>
         </div>
