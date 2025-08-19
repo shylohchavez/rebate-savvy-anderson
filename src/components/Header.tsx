@@ -46,6 +46,12 @@ export const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-6">
             <nav className="flex items-center gap-6">
+              <a 
+                href="/energy-rebates"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium"
+              >
+                Energy Rebates
+              </a>
               <button 
                 onClick={() => scrollToSection('eligibility')}
                 className="text-muted-foreground hover:text-primary transition-colors font-medium"
@@ -110,6 +116,12 @@ export const Header = () => {
         {isMobileMenuOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-border">
             <nav className="flex flex-col gap-4 mt-4">
+              <a 
+                href="/energy-rebates"
+                className="text-left text-muted-foreground hover:text-primary transition-colors font-medium"
+              >
+                Energy Rebates
+              </a>
               <button 
                 onClick={() => scrollToSection('eligibility')}
                 className="text-left text-muted-foreground hover:text-primary transition-colors font-medium"
