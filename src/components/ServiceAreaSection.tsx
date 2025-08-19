@@ -2,11 +2,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
 
 export const ServiceAreaSection = () => {
   const counties = [
-    "Gordon (HQ)", "Bartow", "Catoosa", "Chattooga", "Cherokee", "Cobb", "Dade", "Dawson", "DeKalb",
-    "Fannin", "Fayette", "Floyd", "Forsyth", "Fulton", "Gilmer", "Haralson", "Heard", "Henry", "Lamar",
-    "Meriwether", "Murray", "Paulding", "Pickens", "Pike", "Polk", "Spalding", "Troup", "Union", "Walker",
-    "Whitfield", "Carroll", "Coweta", "Douglas", "Gwinnett", "Hall", "Clayton", "Rockdale", "Newton",
-    "Butts", "Jasper", "Upson", "Harris", "Randolph", "Taylor", "Talbot", "Schley"
+    "Gordon (HQ)", "Bartow", "Floyd", "Murray", "Whitfield", "Chattooga", "Pickens", "Cherokee", "Walker"
   ];
 
   return (
@@ -35,10 +31,10 @@ export const ServiceAreaSection = () => {
             <div className="flex items-center gap-2">
               <Mail className="w-5 h-5 text-anderson-orange" />
               <a 
-                href="mailto:rebates@johnandersonservice.com"
+                href="mailto:service@johnandersonservice.com"
                 className="text-anderson-purple hover:text-anderson-lilac font-semibold transition-colors"
               >
-                rebates@johnandersonservice.com
+                service@johnandersonservice.com
               </a>
             </div>
           </div>

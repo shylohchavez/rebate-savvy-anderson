@@ -37,7 +37,7 @@ const Index = () => {
     "logo": "https://www.johnandersonservice.com/wp-content/uploads/anderson-web-transparent_logo-color.png",
     "image": "https://www.johnandersonservice.com/wp-content/uploads/anderson-web-transparent_logo-color.png",
     "telephone": "+1-706-629-0749",
-    "email": "workorders@johnandersonservice.com",
+    "email": "service@johnandersonservice.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "519 Pine St",
@@ -51,19 +51,8 @@ const Index = () => {
       "latitude": 34.5023,
       "longitude": -84.9516
     },
-    "areaServed": [
-      "Banks County, GA", "Barrow County, GA", "Carroll County, GA", "Catoosa County, GA", 
-      "Chattooga County, GA", "Cherokee County, GA", "Clarke County, GA", "Clayton County, GA", 
-      "Cobb County, GA", "Coweta County, GA", "Dade County, GA", "Dawson County, GA", 
-      "DeKalb County, GA", "Douglas County, GA", "Elbert County, GA", "Fannin County, GA", 
-      "Fayette County, GA", "Floyd County, GA", "Forsyth County, GA", "Franklin County, GA", 
-      "Fulton County, GA", "Gilmer County, GA", "Gordon County, GA", "Gwinnett County, GA", 
-      "Habersham County, GA", "Hall County, GA", "Haralson County, GA", "Hart County, GA", 
-      "Heard County, GA", "Henry County, GA", "Jackson County, GA", "Lumpkin County, GA", 
-      "Madison County, GA", "Murray County, GA", "Newton County, GA", "Oconee County, GA", 
-      "Paulding County, GA", "Pickens County, GA", "Rockdale County, GA", "Stephens County, GA", 
-      "Towns County, GA", "Troup County, GA", "Walker County, GA", "Walton County, GA", 
-      "White County, GA", "Whitfield County, GA"
+    "serviceArea": [
+      "Gordon", "Bartow", "Floyd", "Murray", "Whitfield", "Chattooga", "Pickens", "Cherokee", "Walker"
     ],
     "serviceType": [
       "HVAC Installation",
@@ -83,54 +72,17 @@ const Index = () => {
     "url": "https://www.johnandersonservice.com",
     "logo": "https://www.johnandersonservice.com/wp-content/uploads/anderson-web-transparent_logo-color.png",
     "telephone": "+1-706-629-0749",
-    "email": "workorders@johnandersonservice.com",
+    "email": "service@johnandersonservice.com",
     "areaServed": [
-      {"@type": "AdministrativeArea", "name": "Banks County, GA"},
-      {"@type": "AdministrativeArea", "name": "Barrow County, GA"},
-      {"@type": "AdministrativeArea", "name": "Carroll County, GA"},
-      {"@type": "AdministrativeArea", "name": "Catoosa County, GA"},
-      {"@type": "AdministrativeArea", "name": "Chattooga County, GA"},
-      {"@type": "AdministrativeArea", "name": "Cherokee County, GA"},
-      {"@type": "AdministrativeArea", "name": "Clarke County, GA"},
-      {"@type": "AdministrativeArea", "name": "Clayton County, GA"},
-      {"@type": "AdministrativeArea", "name": "Cobb County, GA"},
-      {"@type": "AdministrativeArea", "name": "Coweta County, GA"},
-      {"@type": "AdministrativeArea", "name": "Dade County, GA"},
-      {"@type": "AdministrativeArea", "name": "Dawson County, GA"},
-      {"@type": "AdministrativeArea", "name": "DeKalb County, GA"},
-      {"@type": "AdministrativeArea", "name": "Douglas County, GA"},
-      {"@type": "AdministrativeArea", "name": "Elbert County, GA"},
-      {"@type": "AdministrativeArea", "name": "Fannin County, GA"},
-      {"@type": "AdministrativeArea", "name": "Fayette County, GA"},
-      {"@type": "AdministrativeArea", "name": "Floyd County, GA"},
-      {"@type": "AdministrativeArea", "name": "Forsyth County, GA"},
-      {"@type": "AdministrativeArea", "name": "Franklin County, GA"},
-      {"@type": "AdministrativeArea", "name": "Fulton County, GA"},
-      {"@type": "AdministrativeArea", "name": "Gilmer County, GA"},
       {"@type": "AdministrativeArea", "name": "Gordon County, GA"},
-      {"@type": "AdministrativeArea", "name": "Gwinnett County, GA"},
-      {"@type": "AdministrativeArea", "name": "Habersham County, GA"},
-      {"@type": "AdministrativeArea", "name": "Hall County, GA"},
-      {"@type": "AdministrativeArea", "name": "Haralson County, GA"},
-      {"@type": "AdministrativeArea", "name": "Hart County, GA"},
-      {"@type": "AdministrativeArea", "name": "Heard County, GA"},
-      {"@type": "AdministrativeArea", "name": "Henry County, GA"},
-      {"@type": "AdministrativeArea", "name": "Jackson County, GA"},
-      {"@type": "AdministrativeArea", "name": "Lumpkin County, GA"},
-      {"@type": "AdministrativeArea", "name": "Madison County, GA"},
+      {"@type": "AdministrativeArea", "name": "Bartow County, GA"},
+      {"@type": "AdministrativeArea", "name": "Floyd County, GA"},
       {"@type": "AdministrativeArea", "name": "Murray County, GA"},
-      {"@type": "AdministrativeArea", "name": "Newton County, GA"},
-      {"@type": "AdministrativeArea", "name": "Oconee County, GA"},
-      {"@type": "AdministrativeArea", "name": "Paulding County, GA"},
+      {"@type": "AdministrativeArea", "name": "Whitfield County, GA"},
+      {"@type": "AdministrativeArea", "name": "Chattooga County, GA"},
       {"@type": "AdministrativeArea", "name": "Pickens County, GA"},
-      {"@type": "AdministrativeArea", "name": "Rockdale County, GA"},
-      {"@type": "AdministrativeArea", "name": "Stephens County, GA"},
-      {"@type": "AdministrativeArea", "name": "Towns County, GA"},
-      {"@type": "AdministrativeArea", "name": "Troup County, GA"},
-      {"@type": "AdministrativeArea", "name": "Walker County, GA"},
-      {"@type": "AdministrativeArea", "name": "Walton County, GA"},
-      {"@type": "AdministrativeArea", "name": "White County, GA"},
-      {"@type": "AdministrativeArea", "name": "Whitfield County, GA"}
+      {"@type": "AdministrativeArea", "name": "Cherokee County, GA"},
+      {"@type": "AdministrativeArea", "name": "Walker County, GA"}
     ]
   };
 
@@ -287,18 +239,22 @@ const Index = () => {
                 <div className="text-sm text-muted-foreground">
                   <p className="font-semibold text-foreground mb-2">Anderson Heating, Air & Insulation</p>
                   <p className="mb-1">DBA John Anderson Service Co.</p>
-                  <p className="mb-2">519 Pine St, Calhoun, GA 30701</p>
-                  <p className="font-semibold text-lg text-secondary-foreground mb-2">706-629-0749</p>
-                  <p>
-                    <a 
-                      href="mailto:workorders@johnandersonservice.com"
-                      className="text-primary hover:text-primary-light"
-                    >
-                      workorders@johnandersonservice.com
-                    </a>
-                  </p>
+                   <p className="mb-2">519 Pine St, Calhoun, GA 30701</p>
+                   <p className="font-semibold text-lg text-secondary-foreground mb-2">
+                     <a href="tel:+17066290749" className="hover:text-primary transition-colors">
+                       (706) 629‑0749
+                     </a>
+                   </p>
+                   <p>
+                     <a 
+                       href="mailto:service@johnandersonservice.com"
+                       className="text-primary hover:text-primary-light"
+                     >
+                       service@johnandersonservice.com
+                     </a>
+                   </p>
                   <p className="mt-2 text-xs">Licensed & Insured HVAC Contractor</p>
-                  <p className="text-xs">Serving 46 Counties Across Georgia</p>
+                  <p className="text-xs">Serving North Georgia Counties</p>
                 </div>
               </div>
 
