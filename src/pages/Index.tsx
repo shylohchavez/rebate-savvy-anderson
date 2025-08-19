@@ -10,6 +10,7 @@ import { CTASection } from "@/components/CTASection";
 import { LeadModal } from "@/components/LeadModal";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { Helmet } from "react-helmet-async";
+import andersonLogo from "@/assets/anderson-logo-full.png";
 
 const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -116,13 +117,12 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               {/* Anderson Logo & Contact */}
               <div className="text-center md:text-left">
-                <div className="bg-primary/10 p-4 rounded-lg border border-primary/20 inline-block mb-4">
-                  <div className="text-primary font-bold text-2xl tracking-wide">
-                    Anderson
-                  </div>
-                  <div className="text-secondary-foreground text-xs font-semibold tracking-wider">
-                    HEATING • AIR • INSULATION
-                  </div>
+                <div className="mb-4">
+                  <img 
+                    src={andersonLogo} 
+                    alt="Anderson Heating, Air & Insulation logo (The Paws-itive Choice)" 
+                    className="h-20 w-auto mx-auto md:mx-0"
+                  />
                 </div>
                 <div className="text-sm text-muted-foreground">
                   <p className="font-semibold text-foreground mb-1">Licensed & Insured HVAC Contractor</p>

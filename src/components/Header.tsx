@@ -1,5 +1,6 @@
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import andersonLogo from "@/assets/anderson-logo-full.png";
 
 export const Header = () => {
   return (
@@ -8,15 +9,12 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           {/* Anderson Logo */}
           <div className="flex items-center">
-            <div className="bg-primary/10 p-3 rounded-lg border border-primary/20">
-              {/* Placeholder for Anderson logo - replace with actual logo */}
-              <div className="text-primary font-bold text-xl tracking-wide">
-                Anderson
-              </div>
-              <div className="text-secondary-foreground text-xs font-semibold tracking-wider">
-                HEATING • AIR • INSULATION
-              </div>
-            </div>
+            <img 
+              src={andersonLogo} 
+              alt="Anderson Heating, Air & Insulation logo (The Paws-itive Choice)" 
+              className="h-16 w-auto"
+              style={{ padding: '0.5rem' }}
+            />
           </div>
 
           {/* Contact CTA */}

@@ -25,22 +25,20 @@ export const CTASection = ({ onCheckEligibility, onGetEstimate }: CTASectionProp
           
           <div className="flex flex-wrap justify-center gap-4">
             <Button 
-              variant="secondary" 
               size="xl"
               onClick={onGetEstimate}
-              className="min-w-[240px] bg-white text-secondary-foreground hover:bg-white/90 rounded-full font-semibold"
+              className="min-w-[240px] bg-white text-secondary-foreground hover:bg-white/90 rounded-full font-semibold shadow-medium"
             >
               <FileText className="w-5 h-5" />
-              Get My No‑Cost Estimate
+              <span>Get My No‑Cost Estimate</span>
             </Button>
             <Button 
-              variant="outline" 
               size="xl"
               onClick={onCheckEligibility}
-              className="min-w-[240px] border-white text-white hover:bg-white hover:text-secondary-foreground rounded-full font-semibold"
+              className="min-w-[240px] border-2 border-white bg-transparent text-white hover:bg-white hover:text-secondary-foreground rounded-full font-semibold shadow-medium"
             >
               <Calculator className="w-5 h-5" />
-              Check My Rebate Eligibility
+              <span>Check My Rebate Eligibility</span>
             </Button>
           </div>
 

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Phone, Calculator, FileText, Shield, Home, FileCheck, Award } from "lucide-react";
+import andersonLogo from "@/assets/anderson-logo-full.png";
 
 interface HeroSectionProps {
   onCheckEligibility: () => void;
@@ -64,16 +65,12 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
           {/* Anderson Brand Mark */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-soft border border-primary/10">
-                <div className="text-primary font-bold text-4xl tracking-wide text-center mb-2">
-                  Anderson
-                </div>
-                <div className="text-secondary-foreground text-sm font-semibold tracking-wider text-center mb-4">
-                  HEATING • AIR • INSULATION
-                </div>
-                <div className="text-center text-xs text-muted-foreground italic">
-                  "The Paws-itive Choice"
-                </div>
+              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-soft border border-primary/10">
+                <img 
+                  src={andersonLogo} 
+                  alt="Anderson Heating, Air & Insulation logo (The Paws-itive Choice)" 
+                  className="h-24 w-auto mx-auto"
+                />
               </div>
             </div>
           </div>
