@@ -12,123 +12,121 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
   return (
     <section className="py-section bg-gradient-hero relative">
       <div className="container max-w-content mx-auto px-4">
-        <div className="grid lg:grid-cols-3 gap-8 items-start">
-          {/* Content - Takes up 2/3 of the space */}
-          <div className="lg:col-span-2 text-center lg:text-left">
-            <h1 className="text-hero font-bold mb-6 text-foreground">
-              Lower Bills. More Comfort. Rebates Made Simple with Anderson.
-            </h1>
-            <p className="text-body text-muted-foreground mb-6 leading-relaxed">
-              We fix drafty rooms and high bills the right way—insulation, air sealing, and heat pumps. 
-              Georgia rebates can lower your cost. Anderson guides the steps; <strong className="text-primary">Georgia confirms 
-              eligibility and approves rebates</strong>.
-            </p>
-
-            {/* Official Georgia Program Links */}
-            <div className="bg-accent/50 border border-primary/20 rounded-lg p-4 mb-6">
-              <h3 className="font-semibold text-primary mb-3 text-sm">Official Georgia Energy Rebates Resources:</h3>
-              <div className="grid grid-cols-2 gap-2 text-sm">
-                <a 
-                  href="https://energyrebates.georgia.gov/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-primary-light flex items-center gap-1"
-                >
-                  Program Home <ExternalLink className="w-3 h-3" />
-                </a>
-                <a 
-                  href="https://energyrebates.georgia.gov/eligibility" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-primary-light flex items-center gap-1"
-                >
-                  Check Eligibility <ExternalLink className="w-3 h-3" />
-                </a>
-                <a 
-                  href="https://energyrebates.georgia.gov/how-do-i-how-apply" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-primary-light flex items-center gap-1"
-                >
-                  How to Apply <ExternalLink className="w-3 h-3" />
-                </a>
-                <a 
-                  href="https://energyrebates.georgia.gov/find-approved-contractor" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-primary-light flex items-center gap-1"
-                >
-                  Find Contractors <ExternalLink className="w-3 h-3" />
-                </a>
-              </div>
+        <div className="max-w-5xl mx-auto">
+          {/* Header with integrated logo */}
+          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-8">
+            <div className="flex-1">
+              <h1 className="text-hero font-bold mb-6 text-foreground text-center lg:text-left">
+                Lower Bills. More Comfort. Rebates Made Simple with Anderson.
+              </h1>
+              <p className="text-body text-muted-foreground mb-6 leading-relaxed text-center lg:text-left">
+                We fix drafty rooms and high bills the right way—insulation, air sealing, and heat pumps. 
+                Georgia rebates can lower your cost. Anderson guides the steps; <strong className="text-primary">Georgia confirms 
+                eligibility and approves rebates</strong>.
+              </p>
             </div>
             
-            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-6">
-              <Button 
-                variant="anderson" 
-                size="xl"
-                onClick={onCheckEligibility}
-                className="min-w-[240px] rounded-full"
-              >
-                <Calculator className="w-5 h-5" />
-                Check My Rebate Eligibility
-              </Button>
-              <Button 
-                variant="anderson-secondary" 
-                size="xl"
-                onClick={onGetEstimate}
-                className="min-w-[240px] rounded-full"
-              >
-                <FileText className="w-5 h-5" />
-                Get My No‑Cost Estimate
-              </Button>
-              <Button 
-                variant="anderson-ghost" 
-                size="xl"
-                asChild
-                className="min-w-[180px] rounded-full"
-              >
-                <a href="tel:+17066290749" className="flex items-center gap-2">
-                  <Phone className="w-5 h-5" />
-                  Call 706-629-0749
-                </a>
-              </Button>
-            </div>
-
-            <p className="text-sm text-muted-foreground mb-6">
-              HEAR applications must be submitted within 90 days of your invoice date. 
-              Rebates depend on eligibility, pre‑approval, and available funding.
-            </p>
-          </div>
-
-          {/* Anderson Logo - Takes up 1/3 of the space */}
-          <div className="lg:col-span-1 flex justify-center lg:justify-center lg:items-start lg:pt-8">
-            <div className="relative max-w-[280px] w-full">
-              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-soft border border-primary/10">
+            {/* Logo positioned naturally in the header flow */}
+            <div className="flex-shrink-0 flex justify-center lg:justify-end">
+              <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-soft border border-primary/10 max-w-[200px]">
                 <img 
                   src="/lovable-uploads/c367d70b-f17b-40dd-8bc3-c5d78000a6f3.png" 
                   alt="Anderson Heating, Air & Insulation - The Paws-itive Choice" 
-                  className="h-32 w-auto mx-auto"
-                  style={{ padding: '8px' }} /* Safe zone */
+                  className="h-24 w-auto mx-auto"
+                  style={{ padding: '6px' }} /* Safe zone */
                   onError={(e) => {
                     console.log('Hero logo failed to load');
                     e.currentTarget.style.display = 'none';
                   }}
                 />
               </div>
-              
-              {/* Additional contact info below logo */}
-              <div className="text-center mt-4 p-4 bg-primary/5 rounded-lg border border-primary/10">
-                <div className="text-sm font-semibold text-primary mb-1">
-                  Serving North Georgia
-                </div>
-                <div className="text-xs text-muted-foreground">
-                  Gordon • Bartow • Floyd • Murray • Whitfield
-                </div>
-                <div className="text-xs text-muted-foreground">
-                  Pickens • Chattooga • Walker • Gilmer
-                </div>
-              </div>
+            </div>
+          </div>
+
+          {/* Official Georgia Program Links */}
+          <div className="bg-accent/50 border border-primary/20 rounded-lg p-4 mb-6">
+            <h3 className="font-semibold text-primary mb-3 text-sm">Official Georgia Energy Rebates Resources:</h3>
+            <div className="grid grid-cols-2 gap-2 text-sm">
+              <a 
+                href="https://energyrebates.georgia.gov/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:text-primary-light flex items-center gap-1"
+              >
+                Program Home <ExternalLink className="w-3 h-3" />
+              </a>
+              <a 
+                href="https://energyrebates.georgia.gov/eligibility" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:text-primary-light flex items-center gap-1"
+              >
+                Check Eligibility <ExternalLink className="w-3 h-3" />
+              </a>
+              <a 
+                href="https://energyrebates.georgia.gov/how-do-i-how-apply" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:text-primary-light flex items-center gap-1"
+              >
+                How to Apply <ExternalLink className="w-3 h-3" />
+              </a>
+              <a 
+                href="https://energyrebates.georgia.gov/find-approved-contractor" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:text-primary-light flex items-center gap-1"
+              >
+                Find Contractors <ExternalLink className="w-3 h-3" />
+              </a>
+            </div>
+          </div>
+          
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap justify-center gap-4 mb-6">
+            <Button 
+              variant="anderson" 
+              size="xl"
+              onClick={onCheckEligibility}
+              className="min-w-[240px] rounded-full"
+            >
+              <Calculator className="w-5 h-5" />
+              Check My Rebate Eligibility
+            </Button>
+            <Button 
+              variant="anderson-secondary" 
+              size="xl"
+              onClick={onGetEstimate}
+              className="min-w-[240px] rounded-full"
+            >
+              <FileText className="w-5 h-5" />
+              Get My No‑Cost Estimate
+            </Button>
+            <Button 
+              variant="anderson-ghost" 
+              size="xl"
+              asChild
+              className="min-w-[180px] rounded-full"
+            >
+              <a href="tel:+17066290749" className="flex items-center gap-2">
+                <Phone className="w-5 h-5" />
+                Call 706-629-0749
+              </a>
+            </Button>
+          </div>
+
+          <p className="text-sm text-muted-foreground mb-6 text-center">
+            HEAR applications must be submitted within 90 days of your invoice date. 
+            Rebates depend on eligibility, pre‑approval, and available funding.
+          </p>
+
+          {/* Service area info */}
+          <div className="text-center p-4 bg-primary/5 rounded-lg border border-primary/10">
+            <div className="text-sm font-semibold text-primary mb-1">
+              Serving North Georgia Counties
+            </div>
+            <div className="text-xs text-muted-foreground">
+              Gordon • Bartow • Floyd • Murray • Whitfield • Pickens • Chattooga • Walker • Gilmer
             </div>
           </div>
         </div>
