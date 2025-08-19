@@ -12,9 +12,9 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
   return (
     <section className="py-section bg-gradient-hero relative">
       <div className="container max-w-content mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
-          {/* Content */}
-          <div className="text-center lg:text-left">
+        <div className="grid lg:grid-cols-3 gap-8 items-start">
+          {/* Content - Takes up 2/3 of the space */}
+          <div className="lg:col-span-2 text-center lg:text-left">
             <h1 className="text-hero font-bold mb-6 text-foreground">
               Lower Bills. More Comfort. Rebates Made Simple with Anderson.
             </h1>
@@ -101,9 +101,9 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
             </p>
           </div>
 
-          {/* Anderson Logo */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative">
+          {/* Anderson Logo - Takes up 1/3 of the space */}
+          <div className="lg:col-span-1 flex justify-center lg:justify-center lg:items-start lg:pt-8">
+            <div className="relative max-w-[280px] w-full">
               <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-soft border border-primary/10">
                 <img 
                   src="/lovable-uploads/c367d70b-f17b-40dd-8bc3-c5d78000a6f3.png" 
@@ -115,6 +115,19 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
                     e.currentTarget.style.display = 'none';
                   }}
                 />
+              </div>
+              
+              {/* Additional contact info below logo */}
+              <div className="text-center mt-4 p-4 bg-primary/5 rounded-lg border border-primary/10">
+                <div className="text-sm font-semibold text-primary mb-1">
+                  Serving North Georgia
+                </div>
+                <div className="text-xs text-muted-foreground">
+                  Gordon • Bartow • Floyd • Murray • Whitfield
+                </div>
+                <div className="text-xs text-muted-foreground">
+                  Pickens • Chattooga • Walker • Gilmer
+                </div>
               </div>
             </div>
           </div>
