@@ -16,10 +16,10 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
           {/* Header with integrated logo */}
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-8">
             <div className="flex-1">
-              <h1 className="text-hero font-bold mb-6 text-foreground text-center lg:text-left">
+              <h1 className="text-hero font-bold mb-6 text-foreground text-center">
                 A Cozier Home, Lower Bills—Handled by Anderson
               </h1>
-              <p className="text-body text-muted-foreground mb-6 leading-relaxed text-center lg:text-left">
+              <p className="text-body text-muted-foreground mb-6 leading-relaxed text-center">
                 We fix comfort and energy waste the right way—insulation, air sealing, and high‑efficiency heat pumps. 
                 Georgia's Home Energy Rebates can help lower your cost. We guide your steps; <strong className="text-anderson-purple">the State confirms eligibility</strong>.
               </p>
@@ -28,7 +28,7 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
             <div className="flex-shrink-0 flex justify-center lg:justify-end">
               <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-soft border border-anderson-purple/10 max-w-[200px]">
                 <img 
-                  src="/lovable-uploads/3f645390-2fd4-4f85-95af-d86e0fdb6253.png" 
+                  src="/images/anderson-logo-mascot.png" 
                   alt="Anderson Heating, Air & Insulation - The Paws-itive Choice" 
                   className="h-24 w-auto mx-auto"
                   style={{ padding: '6px' }} /* Safe zone */
