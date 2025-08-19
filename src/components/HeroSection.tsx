@@ -17,21 +17,19 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-8">
             <div className="flex-1">
               <h1 className="text-hero font-bold mb-6 text-foreground text-center lg:text-left">
-                Lower Bills. More Comfort. Rebates Made Simple with Anderson.
+                A Cozier Home, Lower Bills—Handled by Anderson
               </h1>
               <p className="text-body text-muted-foreground mb-6 leading-relaxed text-center lg:text-left">
-                We fix drafty rooms and high bills the right way—insulation, air sealing, and heat pumps. 
-                Georgia rebates can lower your cost. Anderson guides the steps; <strong className="text-primary">Georgia confirms 
-                eligibility and approves rebates</strong>.
+                We fix comfort and energy waste the right way—insulation, air sealing, and high‑efficiency heat pumps. 
+                Georgia's Home Energy Rebates can help lower your cost. We guide your steps; <strong className="text-anderson-purple">the State confirms eligibility</strong>.
               </p>
             </div>
             
-            {/* Logo positioned naturally in the header flow */}
             <div className="flex-shrink-0 flex justify-center lg:justify-end">
-              <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-soft border border-primary/10 max-w-[200px]">
+              <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-soft border border-anderson-purple/10 max-w-[200px]">
                 <img 
-                  src="/lovable-uploads/c367d70b-f17b-40dd-8bc3-c5d78000a6f3.png" 
-                  alt="Anderson Heating, Air & Insulation - The Paws-itive Choice" 
+                  src="/public/images/anderson-web-transparent_logo-color.png" 
+                  alt="Anderson Heating, Air & Insulation - Licensed HVAC contractors serving North Georgia" 
                   className="h-24 w-auto mx-auto"
                   style={{ padding: '6px' }} /* Safe zone */
                   onError={(e) => {

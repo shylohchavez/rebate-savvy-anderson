@@ -8,19 +8,28 @@
 @layer base {
   :root {
     /* Anderson Official Brand Colors */
+    --anderson-purple: 265 38% 31%; /* #512D6D - wordmark purple */
+    --anderson-orange: 12 71% 49%; /* #D14129 - HEATING•AIR•INSULATION */
+    --anderson-lilac: 265 60% 60%; /* #9960D9 - accent */
+    --anderson-cream: 41 71% 79%; /* #EFDBA2 - soft bg band */
+    --ink: 215 56% 9%; /* #101820 - headings/buttons */
+    --charcoal: 120 2% 17%; /* #2A2A29 - body text */
+    --white: 0 0% 100%; /* #FFFFFF */
+
+    /* Base Theme Colors */
     --background: 0 0% 100%;
-    --foreground: 216 56% 9%; /* #101820 - Ink */
+    --foreground: 215 56% 9%; /* #101820 - Ink */
 
     /* Anderson Purple Brand System */
     --primary: 265 38% 31%; /* #512D6D - Primary Purple */
     --primary-foreground: 0 0% 100%;
-    --primary-light: 265 38% 60%; /* #9069CD - Secondary Purple */
+    --primary-light: 265 60% 60%; /* #9960D9 - Anderson Lilac */
     --primary-glow: 265 38% 45%;
 
     /* Anderson Orange Accent */
-    --secondary: 47 79% 94%; /* Light orange for backgrounds */
-    --secondary-foreground: 14 78% 46%; /* #D1441A - Accent Orange */
-    --accent: 41 73% 83%; /* #EFDBB2 - Cream */
+    --secondary: 12 71% 95%; /* Light orange for backgrounds */
+    --secondary-foreground: 12 71% 49%; /* #D14129 - Anderson Orange */
+    --accent: 41 71% 79%; /* #EFDBA2 - Anderson Cream */
     --accent-foreground: 265 38% 31%;
 
     /* Anderson Brand Neutrals */

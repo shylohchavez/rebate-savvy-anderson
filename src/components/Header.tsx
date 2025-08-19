@@ -21,8 +21,8 @@ export const Header = () => {
           {/* Anderson Logo */}
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/c367d70b-f17b-40dd-8bc3-c5d78000a6f3.png" 
-              alt="Anderson Heating, Air & Insulation - The Paws-itive Choice" 
+              src="/public/images/anderson-web-transparent_logo-color.png" 
+              alt="Anderson Heating, Air & Insulation" 
               className="h-16 w-auto"
               style={{ padding: '4px' }} /* Safe zone */
               onError={(e) => {
