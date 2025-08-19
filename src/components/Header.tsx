@@ -70,11 +70,11 @@ export const Header = () => {
             
             <div className="flex items-center gap-2">
               <a 
-                href="mailto:service@johnandersonservice.com"
+                href="mailto:workorders@johnandersonservice.com"
                 className="text-anderson-purple hover:text-anderson-lilac transition-colors text-sm font-medium hidden sm:flex items-center gap-1"
               >
                 <Mail size={16} />
-                service@johnandersonservice.com
+                workorders@johnandersonservice.com
               </a>
               <div className="text-right mr-4">
                 <p className="text-sm text-muted-foreground">Call for Service</p>
@@ -131,7 +131,7 @@ export const Header = () => {
                 Contact
               </a>
               <a 
-                href="mailto:service@johnandersonservice.com"
+                href="mailto:workorders@johnandersonservice.com"
                 className="text-muted-foreground hover:text-primary transition-colors font-medium"
               >
                 Email Us

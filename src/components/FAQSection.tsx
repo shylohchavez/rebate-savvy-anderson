@@ -11,8 +11,8 @@ export const FAQSection = () => {
               (706) 629‑0749
             </a>{" "}
             or email{" "}
-            <a href="mailto:service@johnandersonservice.com" className="text-primary hover:underline">
-              service@johnandersonservice.com
+            <a href="mailto:workorders@johnandersonservice.com" className="text-primary hover:underline">
+              workorders@johnandersonservice.com
             </a>
             . We serve Gordon, Bartow, Floyd, Murray, Whitfield, Chattooga, Pickens, Cherokee, and Walker counties in North Georgia.
           </p>

@@ -37,7 +37,7 @@ const Index = () => {
     "logo": "https://www.johnandersonservice.com/wp-content/uploads/anderson-web-transparent_logo-color.png",
     "image": "https://www.johnandersonservice.com/wp-content/uploads/anderson-web-transparent_logo-color.png",
     "telephone": "+1-706-629-0749",
-    "email": "service@johnandersonservice.com",
+    "email": "workorders@johnandersonservice.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "519 Pine St",
@@ -72,7 +72,7 @@ const Index = () => {
     "url": "https://www.johnandersonservice.com",
     "logo": "https://www.johnandersonservice.com/wp-content/uploads/anderson-web-transparent_logo-color.png",
     "telephone": "+1-706-629-0749",
-    "email": "service@johnandersonservice.com",
+    "email": "workorders@johnandersonservice.com",
     "areaServed": [
       {"@type": "AdministrativeArea", "name": "Gordon County, GA"},
       {"@type": "AdministrativeArea", "name": "Bartow County, GA"},
@@ -246,12 +246,12 @@ const Index = () => {
                      </a>
                    </p>
                    <p>
-                     <a 
-                       href="mailto:service@johnandersonservice.com"
-                       className="text-primary hover:text-primary-light"
-                     >
-                       service@johnandersonservice.com
-                     </a>
+                      <a 
+                        href="mailto:workorders@johnandersonservice.com"
+                        className="text-primary hover:text-primary-light"
+                      >
+                        workorders@johnandersonservice.com
+                      </a>
                    </p>
                   <p className="mt-2 text-xs">Licensed & Insured HVAC Contractor</p>
                   <p className="text-xs">Serving North Georgia Counties</p>

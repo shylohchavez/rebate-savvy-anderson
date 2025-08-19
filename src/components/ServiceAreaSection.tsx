@@ -31,10 +31,10 @@ export const ServiceAreaSection = () => {
             <div className="flex items-center gap-2">
               <Mail className="w-5 h-5 text-anderson-orange" />
               <a 
-                href="mailto:service@johnandersonservice.com"
+                href="mailto:workorders@johnandersonservice.com"
                 className="text-anderson-purple hover:text-anderson-lilac font-semibold transition-colors"
               >
-                service@johnandersonservice.com
+                workorders@johnandersonservice.com
               </a>
             </div>
           </div>
