@@ -68,7 +68,7 @@ export const EligibilitySection = () => {
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse bg-card rounded-lg overflow-hidden shadow-soft">
                   <thead>
-                    <tr className="bg-primary-light/50">
+                    <tr className="bg-accent text-primary">
                       <th className="p-3 text-left font-semibold">Household Size</th>
                       {[1, 2, 3, 4, 5, 6, 7, 8].map(size => (
                         <th key={size} className="p-3 text-center font-semibold">{size}</th>

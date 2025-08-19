@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { ProgramsSection } from "@/components/ProgramsSection";
 import { EligibilitySection } from "@/components/EligibilitySection";
@@ -88,6 +89,8 @@ const Index = () => {
       </Helmet>
 
       <main className="min-h-screen bg-background">
+        <Header />
+        
         <HeroSection 
           onCheckEligibility={scrollToEligibility}
           onGetEstimate={openEstimateModal}
@@ -108,15 +111,37 @@ const Index = () => {
           onGetEstimate={openEstimateModal}
         />
 
-        <footer className="py-8 bg-muted/30 border-t border-border">
-          <div className="container max-w-content mx-auto px-4 text-center">
-            <p className="text-sm text-muted-foreground mb-4">
-              <strong>Compliance:</strong> Anderson is a participating contractor. Customers complete their own application and income step; 
-              the State reviews and approves rebates. We provide a checklist, detailed invoice, photos, and reports to make it easy.
-            </p>
-            <p className="text-xs text-muted-foreground">
-              Last updated: {new Date().toLocaleDateString()}
-            </p>
+        <footer className="py-12 bg-accent/30 border-t border-primary/20">
+          <div className="container max-w-content mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Anderson Logo & Contact */}
+              <div className="text-center md:text-left">
+                <div className="bg-primary/10 p-4 rounded-lg border border-primary/20 inline-block mb-4">
+                  <div className="text-primary font-bold text-2xl tracking-wide">
+                    Anderson
+                  </div>
+                  <div className="text-secondary-foreground text-xs font-semibold tracking-wider">
+                    HEATING • AIR • INSULATION
+                  </div>
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  <p className="font-semibold text-foreground mb-1">Licensed & Insured HVAC Contractor</p>
+                  <p>Serving Gordon County & Northwest Georgia</p>
+                  <p className="font-semibold text-lg text-secondary-foreground mt-2">(555) 123-4567</p>
+                </div>
+              </div>
+
+              {/* Compliance */}
+              <div className="text-center md:text-right">
+                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                  <strong className="text-foreground">Compliance:</strong> Anderson is a participating contractor. Customers complete their own application and income step; 
+                  the State reviews and approves rebates. We provide a checklist, detailed invoice, photos, and reports to make it easy.
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  Last updated: {new Date().toLocaleDateString()}
+                </p>
+              </div>
+            </div>
           </div>
         </footer>
 

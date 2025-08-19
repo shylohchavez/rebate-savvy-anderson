@@ -20,7 +20,11 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         hero: "bg-gradient-cta text-white hover:shadow-glow hover:scale-[1.02] transform transition-all duration-300 shadow-medium",
         trust: "bg-primary-light text-primary border border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-300",
-        phone: "bg-background text-primary border-2 border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+        phone: "bg-background text-primary border-2 border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300",
+        // Anderson Brand Button Variants
+        anderson: "bg-secondary-foreground text-white font-semibold hover:bg-[hsl(14_78%_40%)] transition-colors shadow-medium", // Orange primary
+        "anderson-secondary": "bg-primary text-white font-semibold hover:bg-[hsl(265_38%_25%)] transition-colors shadow-medium", // Purple primary  
+        "anderson-ghost": "border border-primary bg-transparent text-primary hover:bg-primary-light hover:text-white transition-all"
       },
       size: {
         default: "h-10 px-4 py-2",
