@@ -24,6 +24,11 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				// Anderson Brand Colors
+				'anderson-purple': 'hsl(var(--anderson-purple))',
+				'anderson-orange': 'hsl(var(--anderson-orange))',
+				'anderson-lilac': 'hsl(var(--anderson-lilac))',
+				'anderson-cream': 'hsl(var(--anderson-cream))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))',
@@ -68,6 +73,7 @@ export default {
 			},
 			fontSize: {
 				'hero': 'var(--font-hero)',
+				'section-title': 'var(--font-h2)',
 				'h2': 'var(--font-h2)',
 				'h3': 'var(--font-h3)',
 				'body': 'var(--font-body)'

@@ -226,7 +226,7 @@ const Index = () => {
               <div className="text-center md:text-left">
                 <div className="mb-4">
                   <img 
-                    src="/lovable-uploads/c367d70b-f17b-40dd-8bc3-c5d78000a6f3.png" 
+                    src="/images/anderson-logo-mascot.png" 
                     alt="Anderson Heating, Air & Insulation - The Paws-itive Choice" 
                     className="h-24 w-auto mx-auto md:mx-0"
                     style={{ padding: '4px' }} /* Safe zone */
