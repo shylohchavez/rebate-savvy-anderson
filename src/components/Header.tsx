@@ -1,7 +1,19 @@
-import { Phone } from "lucide-react";
+
+import { Phone, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 export const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMobileMenuOpen(false);
+    }
+  };
+
   return (
     <header className="bg-white shadow-soft border-b border-border sticky top-0 z-50">
       <div className="container max-w-content mx-auto px-4 py-3">
@@ -10,8 +22,9 @@ export const Header = () => {
           <div className="flex items-center">
             <img 
               src="/lovable-uploads/c367d70b-f17b-40dd-8bc3-c5d78000a6f3.png" 
-              alt="Anderson Heating, Air & Insulation logo (The Paws-itive Choice)" 
+              alt="Anderson Heating, Air & Insulation - The Paws-itive Choice" 
               className="h-16 w-auto"
+              style={{ padding: '4px' }} /* Safe zone */
               onError={(e) => {
                 console.log('Logo failed to load, using fallback');
                 const target = e.currentTarget as HTMLImageElement;
@@ -24,33 +37,104 @@ export const Header = () => {
               <div className="text-white font-bold text-xl tracking-wide">
                 Anderson
               </div>
-              <div className="text-secondary-foreground text-xs font-semibold tracking-wider">
-                HEADING • AIR • INSULATION
+              <div className="text-white text-xs font-semibold tracking-wider">
+                HEATING • AIR • INSULATION
               </div>
             </div>
           </div>
 
-          {/* Contact CTA */}
-          <div className="flex items-center gap-4">
-            <div className="hidden md:block text-right">
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-6">
+            <nav className="flex items-center gap-6">
+              <button 
+                onClick={() => scrollToSection('eligibility')}
+                className="text-muted-foreground hover:text-primary transition-colors font-medium"
+              >
+                Check Eligibility
+              </button>
+              <button 
+                onClick={() => scrollToSection('faq')}
+                className="text-muted-foreground hover:text-primary transition-colors font-medium"
+              >
+                FAQ
+              </button>
+              <a 
+                href="https://johnandersonservice.com/contact-us/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium"
+              >
+                Contact
+              </a>
+            </nav>
+            
+            <div className="text-right">
               <p className="text-sm text-muted-foreground">Call for Service</p>
               <p className="font-semibold text-foreground text-lg">
-                (555) 123-4567
+                706-629-0749
               </p>
             </div>
+            
             <Button 
               variant="anderson" 
               size="lg"
               className="rounded-full"
               asChild
             >
-              <a href="tel:+15551234567" className="flex items-center gap-2">
+              <a href="tel:+17066290749" className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <span className="hidden sm:inline">Call Now</span>
+                Call Now
               </a>
             </Button>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button 
+            className="lg:hidden p-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden mt-4 pb-4 border-t border-border">
+            <nav className="flex flex-col gap-4 mt-4">
+              <button 
+                onClick={() => scrollToSection('eligibility')}
+                className="text-left text-muted-foreground hover:text-primary transition-colors font-medium"
+              >
+                Check Eligibility
+              </button>
+              <button 
+                onClick={() => scrollToSection('faq')}
+                className="text-left text-muted-foreground hover:text-primary transition-colors font-medium"
+              >
+                FAQ
+              </button>
+              <a 
+                href="https://johnandersonservice.com/contact-us/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium"
+              >
+                Contact
+              </a>
+              <Button 
+                variant="anderson" 
+                size="lg"
+                className="rounded-full w-full"
+                asChild
+              >
+                <a href="tel:+17066290749" className="flex items-center justify-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  Call 706-629-0749
+                </a>
+              </Button>
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   );

@@ -1,25 +1,26 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Anderson Heating, Air & Insulation Design System - Brand Guidelines Applied */
+/* Anderson Heating, Air & Insulation Design System - Official Brand Guidelines */
 
 @layer base {
   :root {
-    /* Anderson Brand Colors (from Logo Guide) */
+    /* Anderson Official Brand Colors */
     --background: 0 0% 100%;
-    --foreground: 216 56% 9%; /* #101820 - PMS Black 6 CP */
+    --foreground: 216 56% 9%; /* #101820 - Ink */
 
-    /* Anderson Purple Brand System (PMS 269 CP & 265 CP) */
+    /* Anderson Purple Brand System */
     --primary: 265 38% 31%; /* #512D6D - Primary Purple */
     --primary-foreground: 0 0% 100%;
     --primary-light: 265 38% 60%; /* #9069CD - Secondary Purple */
     --primary-glow: 265 38% 45%;
 
-    /* Anderson Orange Accent (PMS 7597 CP) */
+    /* Anderson Orange Accent */
     --secondary: 47 79% 94%; /* Light orange for backgrounds */
     --secondary-foreground: 14 78% 46%; /* #D1441A - Accent Orange */
-    --accent: 41 73% 83%; /* #EFDBB2 - Cream/Neutral */
+    --accent: 41 73% 83%; /* #EFDBB2 - Cream */
     --accent-foreground: 265 38% 31%;
 
     /* Anderson Brand Neutrals */
@@ -54,7 +55,7 @@
     --spacing-content: clamp(1rem, 2.5vw, 2rem);
     --max-width: 1200px;
 
-    /* Anderson Typography Scale (Town 10 Display / Oswald + Inter) */
+    /* Anderson Typography Scale */
     --font-hero: clamp(2.25rem, 4.5vw, 3.75rem);
     --font-h2: clamp(1.75rem, 3vw, 2.5rem);
     --font-h3: clamp(1.375rem, 2.5vw, 1.625rem);
@@ -101,7 +102,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oswald', 'Town 10 Display', system-ui, sans-serif;
+    font-family: 'Oswald', system-ui, sans-serif;
     font-weight: 700;
     line-height: 1.2;
     color: hsl(var(--foreground));

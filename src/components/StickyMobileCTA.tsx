@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import { Calculator, FileText } from "lucide-react";
+import { Calculator, FileText, Phone } from "lucide-react";
 
 interface StickyMobileCTAProps {
   onCheckEligibility: () => void;
@@ -14,19 +15,30 @@ export const StickyMobileCTA = ({ onCheckEligibility, onGetEstimate }: StickyMob
           variant="anderson" 
           size="sm"
           onClick={onCheckEligibility}
-          className="flex-1 max-w-[140px] rounded-full"
+          className="flex-1 max-w-[110px] rounded-full text-xs"
         >
-          <Calculator className="w-4 h-4" />
-          Check Eligibility
+          <Calculator className="w-3 h-3" />
+          Eligibility
         </Button>
         <Button 
           variant="anderson-secondary" 
           size="sm"
           onClick={onGetEstimate}
-          className="flex-1 max-w-[140px] rounded-full"
+          className="flex-1 max-w-[110px] rounded-full text-xs"
         >
-          <FileText className="w-4 h-4" />
-          Get Estimate
+          <FileText className="w-3 h-3" />
+          Estimate
+        </Button>
+        <Button 
+          variant="anderson-ghost" 
+          size="sm"
+          asChild
+          className="flex-1 max-w-[110px] rounded-full text-xs"
+        >
+          <a href="tel:+17066290749" className="flex items-center gap-1">
+            <Phone className="w-3 h-3" />
+            706-629-0749
+          </a>
         </Button>
       </div>
     </div>

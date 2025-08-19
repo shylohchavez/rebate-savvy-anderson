@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import { Calculator, FileText, Clock } from "lucide-react";
+import { Calculator, FileText, Clock, Phone } from "lucide-react";
 
 interface CTASectionProps {
   onCheckEligibility: () => void;
@@ -23,7 +24,7 @@ export const CTASection = ({ onCheckEligibility, onGetEstimate }: CTASectionProp
             Don't wait—secure your rebate opportunity today.
           </p>
           
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4 mb-6">
             <Button 
               size="xl"
               onClick={onGetEstimate}
@@ -40,12 +41,25 @@ export const CTASection = ({ onCheckEligibility, onGetEstimate }: CTASectionProp
               <Calculator className="w-5 h-5" />
               <span>Check My Rebate Eligibility</span>
             </Button>
+            <Button 
+              size="xl"
+              asChild
+              className="min-w-[200px] border-2 border-white bg-transparent text-white hover:bg-white hover:text-secondary-foreground rounded-full font-semibold shadow-medium"
+            >
+              <a href="tel:+17066290749" className="flex items-center gap-2">
+                <Phone className="w-5 h-5" />
+                <span>Call 706‑629‑0749</span>
+              </a>
+            </Button>
           </div>
 
-          {/* Anderson Mini Logo */}
+          {/* Anderson Branding */}
           <div className="mt-8 pt-6 border-t border-white/20">
             <div className="text-white/80 text-sm font-semibold tracking-wider">
               ANDERSON HEATING • AIR • INSULATION
+            </div>
+            <div className="text-white/70 text-xs mt-1">
+              DBA John Anderson Service Co. • Licensed & Insured
             </div>
           </div>
         </div>

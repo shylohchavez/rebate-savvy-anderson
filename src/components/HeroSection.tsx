@@ -1,6 +1,7 @@
+
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Phone, Calculator, FileText, Shield, Home, FileCheck, Award } from "lucide-react";
+import { Phone, Calculator, FileText, Shield, Home, FileCheck, Award, ExternalLink } from "lucide-react";
 
 interface HeroSectionProps {
   onCheckEligibility: () => void;
@@ -17,11 +18,50 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
             <h1 className="text-hero font-bold mb-6 text-foreground">
               Lower Bills. More Comfort. Rebates Made Simple with Anderson.
             </h1>
-            <p className="text-body text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-body text-muted-foreground mb-6 leading-relaxed">
               We fix drafty rooms and high bills the right way—insulation, air sealing, and heat pumps. 
-              Georgia rebates can lower your cost. Anderson guides the steps; the State confirms 
-              eligibility and approves rebates.
+              Georgia rebates can lower your cost. Anderson guides the steps; <strong className="text-primary">Georgia confirms 
+              eligibility and approves rebates</strong>.
             </p>
+
+            {/* Official Georgia Program Links */}
+            <div className="bg-accent/50 border border-primary/20 rounded-lg p-4 mb-6">
+              <h3 className="font-semibold text-primary mb-3 text-sm">Official Georgia Energy Rebates Resources:</h3>
+              <div className="grid grid-cols-2 gap-2 text-sm">
+                <a 
+                  href="https://energyrebates.georgia.gov/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-primary-light flex items-center gap-1"
+                >
+                  Program Home <ExternalLink className="w-3 h-3" />
+                </a>
+                <a 
+                  href="https://energyrebates.georgia.gov/eligibility" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-primary-light flex items-center gap-1"
+                >
+                  Check Eligibility <ExternalLink className="w-3 h-3" />
+                </a>
+                <a 
+                  href="https://energyrebates.georgia.gov/how-do-i-how-apply" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-primary-light flex items-center gap-1"
+                >
+                  How to Apply <ExternalLink className="w-3 h-3" />
+                </a>
+                <a 
+                  href="https://energyrebates.georgia.gov/find-approved-contractor" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-primary-light flex items-center gap-1"
+                >
+                  Find Contractors <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+            </div>
             
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-6">
               <Button 
@@ -48,9 +88,9 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
                 asChild
                 className="min-w-[180px] rounded-full"
               >
-                <a href="tel:+15551234567" className="flex items-center gap-2">
+                <a href="tel:+17066290749" className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Call Anderson Now
+                  Call 706-629-0749
                 </a>
               </Button>
             </div>
@@ -61,14 +101,15 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
             </p>
           </div>
 
-          {/* Anderson Brand Mark */}
+          {/* Anderson Logo */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-soft border border-primary/10">
                 <img 
                   src="/lovable-uploads/c367d70b-f17b-40dd-8bc3-c5d78000a6f3.png" 
-                  alt="Anderson Heating, Air & Insulation logo (The Paws-itive Choice)" 
+                  alt="Anderson Heating, Air & Insulation - The Paws-itive Choice" 
                   className="h-32 w-auto mx-auto"
+                  style={{ padding: '8px' }} /* Safe zone */
                   onError={(e) => {
                     console.log('Hero logo failed to load');
                     e.currentTarget.style.display = 'none';
@@ -95,7 +136,7 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
           </Badge>
           <Badge variant="secondary" className="bg-accent text-accent-foreground border border-primary/20">
             <Award className="w-4 h-4 mr-2" />
-            State Quality Checks
+            Georgia Quality Checks
           </Badge>
         </div>
       </div>
