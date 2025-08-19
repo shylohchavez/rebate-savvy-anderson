@@ -126,7 +126,7 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
               Serving North Georgia Counties
             </div>
             <div className="text-xs text-muted-foreground">
-              Gordon • Bartow • Floyd • Murray • Whitfield • Pickens • Chattooga • Walker • Gilmer
+              46 Counties Across Georgia • Licensed & Insured
             </div>
           </div>
         </div>

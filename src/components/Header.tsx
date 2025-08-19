@@ -59,7 +59,7 @@ export const Header = () => {
                 FAQ
               </button>
               <a 
-                href="https://johnandersonservice.com/contact-us/" 
+                href="https://www.johnandersonservice.com/contact-us/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors font-medium"
@@ -114,7 +114,7 @@ export const Header = () => {
                 FAQ
               </button>
               <a 
-                href="https://johnandersonservice.com/contact-us/" 
+                href="https://www.johnandersonservice.com/contact-us/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors font-medium"

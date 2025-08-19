@@ -7,6 +7,7 @@ import { UpgradesSection } from "@/components/UpgradesSection";
 import { ProcessSection } from "@/components/ProcessSection";
 import { FAQSection } from "@/components/FAQSection";
 import { CTASection } from "@/components/CTASection";
+import { ServiceAreaSection } from "@/components/ServiceAreaSection";
 import { LeadModal } from "@/components/LeadModal";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { Helmet } from "react-helmet-async";
@@ -29,13 +30,13 @@ const Index = () => {
   const localBusinessData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://johnandersonservice.com/#organization",
+    "@id": "https://www.johnandersonservice.com/#organization",
     "name": "Anderson Heating, Air & Insulation",
     "alternateName": "John Anderson Service Co.",
-    "url": "https://johnandersonservice.com",
-    "logo": "https://johnandersonservice.com/wp-content/uploads/anderson-web-transparent_logo-color.png",
-    "image": "https://johnandersonservice.com/wp-content/uploads/anderson-web-transparent_logo-color.png",
-    "telephone": "+17066290749",
+    "url": "https://www.johnandersonservice.com",
+    "logo": "https://www.johnandersonservice.com/wp-content/uploads/anderson-web-transparent_logo-color.png",
+    "image": "https://www.johnandersonservice.com/wp-content/uploads/anderson-web-transparent_logo-color.png",
+    "telephone": "+1-706-629-0749",
     "email": "workorders@johnandersonservice.com",
     "address": {
       "@type": "PostalAddress",
@@ -51,15 +52,18 @@ const Index = () => {
       "longitude": -84.9516
     },
     "areaServed": [
-      "Gordon County, GA",
-      "Bartow County, GA", 
-      "Floyd County, GA",
-      "Murray County, GA",
-      "Whitfield County, GA",
-      "Pickens County, GA",
-      "Chattooga County, GA",
-      "Walker County, GA",
-      "Gilmer County, GA"
+      "Banks County, GA", "Barrow County, GA", "Carroll County, GA", "Catoosa County, GA", 
+      "Chattooga County, GA", "Cherokee County, GA", "Clarke County, GA", "Clayton County, GA", 
+      "Cobb County, GA", "Coweta County, GA", "Dade County, GA", "Dawson County, GA", 
+      "DeKalb County, GA", "Douglas County, GA", "Elbert County, GA", "Fannin County, GA", 
+      "Fayette County, GA", "Floyd County, GA", "Forsyth County, GA", "Franklin County, GA", 
+      "Fulton County, GA", "Gilmer County, GA", "Gordon County, GA", "Gwinnett County, GA", 
+      "Habersham County, GA", "Hall County, GA", "Haralson County, GA", "Hart County, GA", 
+      "Heard County, GA", "Henry County, GA", "Jackson County, GA", "Lumpkin County, GA", 
+      "Madison County, GA", "Murray County, GA", "Newton County, GA", "Oconee County, GA", 
+      "Paulding County, GA", "Pickens County, GA", "Rockdale County, GA", "Stephens County, GA", 
+      "Towns County, GA", "Troup County, GA", "Walker County, GA", "Walton County, GA", 
+      "White County, GA", "Whitfield County, GA"
     ],
     "serviceType": [
       "HVAC Installation",
@@ -76,19 +80,57 @@ const Index = () => {
     "@type": "Organization",
     "name": "Anderson Heating, Air & Insulation",
     "alternateName": "John Anderson Service Co.",
-    "url": "https://johnandersonservice.com",
-    "logo": "https://johnandersonservice.com/wp-content/uploads/anderson-web-transparent_logo-color.png",
-    "telephone": "+17066290749",
+    "url": "https://www.johnandersonservice.com",
+    "logo": "https://www.johnandersonservice.com/wp-content/uploads/anderson-web-transparent_logo-color.png",
+    "telephone": "+1-706-629-0749",
     "email": "workorders@johnandersonservice.com",
     "areaServed": [
-      {
-        "@type": "AdministrativeArea",
-        "name": "Gordon County, GA"
-      },
-      {
-        "@type": "AdministrativeArea", 
-        "name": "Northwest Georgia"
-      }
+      {"@type": "AdministrativeArea", "name": "Banks County, GA"},
+      {"@type": "AdministrativeArea", "name": "Barrow County, GA"},
+      {"@type": "AdministrativeArea", "name": "Carroll County, GA"},
+      {"@type": "AdministrativeArea", "name": "Catoosa County, GA"},
+      {"@type": "AdministrativeArea", "name": "Chattooga County, GA"},
+      {"@type": "AdministrativeArea", "name": "Cherokee County, GA"},
+      {"@type": "AdministrativeArea", "name": "Clarke County, GA"},
+      {"@type": "AdministrativeArea", "name": "Clayton County, GA"},
+      {"@type": "AdministrativeArea", "name": "Cobb County, GA"},
+      {"@type": "AdministrativeArea", "name": "Coweta County, GA"},
+      {"@type": "AdministrativeArea", "name": "Dade County, GA"},
+      {"@type": "AdministrativeArea", "name": "Dawson County, GA"},
+      {"@type": "AdministrativeArea", "name": "DeKalb County, GA"},
+      {"@type": "AdministrativeArea", "name": "Douglas County, GA"},
+      {"@type": "AdministrativeArea", "name": "Elbert County, GA"},
+      {"@type": "AdministrativeArea", "name": "Fannin County, GA"},
+      {"@type": "AdministrativeArea", "name": "Fayette County, GA"},
+      {"@type": "AdministrativeArea", "name": "Floyd County, GA"},
+      {"@type": "AdministrativeArea", "name": "Forsyth County, GA"},
+      {"@type": "AdministrativeArea", "name": "Franklin County, GA"},
+      {"@type": "AdministrativeArea", "name": "Fulton County, GA"},
+      {"@type": "AdministrativeArea", "name": "Gilmer County, GA"},
+      {"@type": "AdministrativeArea", "name": "Gordon County, GA"},
+      {"@type": "AdministrativeArea", "name": "Gwinnett County, GA"},
+      {"@type": "AdministrativeArea", "name": "Habersham County, GA"},
+      {"@type": "AdministrativeArea", "name": "Hall County, GA"},
+      {"@type": "AdministrativeArea", "name": "Haralson County, GA"},
+      {"@type": "AdministrativeArea", "name": "Hart County, GA"},
+      {"@type": "AdministrativeArea", "name": "Heard County, GA"},
+      {"@type": "AdministrativeArea", "name": "Henry County, GA"},
+      {"@type": "AdministrativeArea", "name": "Jackson County, GA"},
+      {"@type": "AdministrativeArea", "name": "Lumpkin County, GA"},
+      {"@type": "AdministrativeArea", "name": "Madison County, GA"},
+      {"@type": "AdministrativeArea", "name": "Murray County, GA"},
+      {"@type": "AdministrativeArea", "name": "Newton County, GA"},
+      {"@type": "AdministrativeArea", "name": "Oconee County, GA"},
+      {"@type": "AdministrativeArea", "name": "Paulding County, GA"},
+      {"@type": "AdministrativeArea", "name": "Pickens County, GA"},
+      {"@type": "AdministrativeArea", "name": "Rockdale County, GA"},
+      {"@type": "AdministrativeArea", "name": "Stephens County, GA"},
+      {"@type": "AdministrativeArea", "name": "Towns County, GA"},
+      {"@type": "AdministrativeArea", "name": "Troup County, GA"},
+      {"@type": "AdministrativeArea", "name": "Walker County, GA"},
+      {"@type": "AdministrativeArea", "name": "Walton County, GA"},
+      {"@type": "AdministrativeArea", "name": "White County, GA"},
+      {"@type": "AdministrativeArea", "name": "Whitfield County, GA"}
     ]
   };
 
@@ -96,9 +138,9 @@ const Index = () => {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Anderson Heating, Air & Insulation",
-    "url": "https://johnandersonservice.com",
+    "url": "https://www.johnandersonservice.com",
     "publisher": {
-      "@id": "https://johnandersonservice.com/#organization"
+      "@id": "https://www.johnandersonservice.com/#organization"
     }
   };
 
@@ -108,7 +150,7 @@ const Index = () => {
       "@type": "Service",
       "name": "Heat Pump Installation",
       "provider": {
-        "@id": "https://johnandersonservice.com/#organization"
+        "@id": "https://www.johnandersonservice.com/#organization"
       },
       "areaServed": "Northwest Georgia",
       "description": "Professional heat pump installation with Georgia energy rebate guidance"
@@ -118,7 +160,7 @@ const Index = () => {
       "@type": "Service",
       "name": "Insulation & Air Sealing",
       "provider": {
-        "@id": "https://johnandersonservice.com/#organization"
+        "@id": "https://www.johnandersonservice.com/#organization"
       },
       "areaServed": "Northwest Georgia",
       "description": "Whole-home insulation and air sealing services for energy efficiency"
@@ -128,7 +170,7 @@ const Index = () => {
       "@type": "Service", 
       "name": "Home Energy Assessment",
       "provider": {
-        "@id": "https://johnandersonservice.com/#organization"
+        "@id": "https://www.johnandersonservice.com/#organization"
       },
       "areaServed": "Northwest Georgia",
       "description": "Comprehensive home energy audits and efficiency recommendations"
@@ -164,13 +206,13 @@ const Index = () => {
         <title>Georgia Home Energy Rebates (HER & HEAR) | Anderson Heating, Air & Insulation</title>
         <meta name="description" content="Cut bills and boost comfort with Anderson's whole-home approach. We guide Georgia HER & HEAR rebates and handle the hard parts. Funds are limited—check eligibility today." />
         <meta name="keywords" content="Georgia home energy rebates, HER, HEAR, heat pump installation, insulation, air sealing, Anderson HVAC, Gordon County" />
-        <link rel="canonical" href="https://johnandersonservice.com/energy-rebates" />
+        <link rel="canonical" href="https://www.johnandersonservice.com/hear-her/" />
         
         <meta property="og:title" content="Georgia Home Energy Rebates with Anderson" />
         <meta property="og:description" content="Lower bills. More comfort. Rebates made simple with Anderson. Georgia confirms eligibility; we guide the steps." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://johnandersonservice.com/energy-rebates" />
-        <meta property="og:image" content="https://johnandersonservice.com/wp-content/uploads/anderson-web-transparent_logo-color.png" />
+        <meta property="og:url" content="https://www.johnandersonservice.com/hear-her/" />
+        <meta property="og:image" content="https://www.johnandersonservice.com/wp-content/uploads/anderson-web-transparent_logo-color.png" />
         
         <script type="application/ld+json">
           {JSON.stringify(localBusinessData)}
@@ -206,6 +248,8 @@ const Index = () => {
         <UpgradesSection />
         
         <ProcessSection />
+        
+        <ServiceAreaSection />
         
         <FAQSection />
         
@@ -245,7 +289,7 @@ const Index = () => {
                     </a>
                   </p>
                   <p className="mt-2 text-xs">Licensed & Insured HVAC Contractor</p>
-                  <p className="text-xs">Serving Gordon, Bartow, Floyd, Murray, Whitfield, Pickens, Chattooga, Walker & Gilmer Counties</p>
+                  <p className="text-xs">Serving 46 Counties Across Georgia</p>
                 </div>
               </div>
 
