@@ -27,56 +27,41 @@ const Index = () => {
   // Add structured data for SEO
   const structuredData = {
     "@context": "https://schema.org",
-    "@graph": [
+    "@type": "Organization",
+    "name": "Anderson Heating, Air & Insulation",
+    "url": "https://example.com",
+    "telephone": "+1-555-123-4567",
+    "areaServed": [
       {
-        "@type": "Organization",
-        "name": "Anderson Heating, Air & Insulation",
-        "url": "https://example.com",
-        "telephone": "+1-555-123-4567",
-        "areaServed": [
-          {
-            "@type": "AdministrativeArea",
-            "name": "Gordon County, GA"
-          },
-          {
-            "@type": "AdministrativeArea", 
-            "name": "Northwest Georgia"
-          }
-        ]
+        "@type": "AdministrativeArea",
+        "name": "Gordon County, GA"
       },
       {
-        "@type": "Service",
-        "serviceType": "Heat Pump Installation",
-        "provider": {
-          "@type": "Organization",
-          "name": "Anderson Heating, Air & Insulation"
-        },
-        "areaServed": "Georgia",
-        "offers": {
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock"
+        "@type": "AdministrativeArea", 
+        "name": "Northwest Georgia"
+      }
+    ]
+  };
+
+  const faqData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who decides my income eligibility?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Georgia's Home Energy Rebates team reviews your documents and confirms eligibility. Anderson prepares project paperwork but does not approve income."
         }
       },
       {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Who decides my income eligibility?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Georgia's Home Energy Rebates team reviews your documents and confirms eligibility. Anderson prepares project paperwork but does not approve income."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What's the HEAR deadline?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "HEAR applications must be submitted within 90 days of your invoice date."
-            }
-          }
-        ]
+        "@type": "Question",
+        "name": "What's the HEAR deadline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HEAR applications must be submitted within 90 days of your invoice date."
+        }
       }
     ]
   };
@@ -96,6 +81,9 @@ const Index = () => {
         
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqData)}
         </script>
       </Helmet>
 
