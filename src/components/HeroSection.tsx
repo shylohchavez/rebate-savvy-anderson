@@ -21,7 +21,7 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
                 Georgia's Home Energy Rebates Are Complicated. We Make Them Simple.
               </h1>
               <p className="text-body text-muted-foreground mb-6 leading-relaxed text-center">
-                As a GEFA-approved contractor with over 45 years of whole-home expertise, John Anderson Service handles all the paperwork, testing, and compliance so you can maximize your savings—up to $14,000.
+                As a GEFA-approved contractor with over 45 years of whole-home expertise, John Anderson Service handles all the paperwork, testing, and compliance so you can maximize your savings—potentially up to $30,000 by combining the HEAR ($14,000) and HER ($16,000) programs.
               </p>
             </div>
             
