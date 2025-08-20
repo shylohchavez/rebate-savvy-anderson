@@ -2,7 +2,7 @@
 import { Phone, Menu, X, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import andersonLogo from "@/assets/anderson-logo.png";
+// Using the uploaded logo directly
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,7 +22,7 @@ export const Header = () => {
           {/* Anderson Logo */}
           <div className="flex items-center">
             <img 
-              src={andersonLogo} 
+              src="/lovable-uploads/8ce0adc9-4809-459c-b2fa-5c3761fffc0e.png" 
               alt="Anderson Heating, Air & Insulation - The Paws-itive Choice" 
               className="h-16 w-auto"
             />
