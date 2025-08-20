@@ -31,7 +31,7 @@ const Index = () => {
   // Enhanced structured data with Anderson company info
   const localBusinessData = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "HVACBusiness",
     "@id": `${COMPANY.website}/#organization`,
     "name": COMPANY.legal_name,
     "alternateName": COMPANY.dba,
@@ -158,9 +158,9 @@ const Index = () => {
     <>
       <Helmet>
         <title>GEFA Home Energy Rebate Experts in North GA | John Anderson Service</title>
-        <meta name="description" content="Your GEFA-approved contractor for HER & HEAR rebates in North Georgia. We handle the paperwork for heat pumps, insulation, and more. Maximize your savings up to $14,000." />
-        <meta name="keywords" content="Georgia home energy rebates, HER, HEAR, heat pump installation, insulation, air sealing, Anderson HVAC, Gordon County, GEFA approved contractor" />
-        <link rel="canonical" href={`${COMPANY.website}/`} />
+        <meta name="description" content="Your approved GEFA contractor for HER & HEAR rebates in North Georgia. We handle the paperwork for heat pumps, insulation, and more. Maximize your savings up to $30,000." />
+        <meta name="keywords" content="Georgia home energy rebates, HER, HEAR, heat pump installation, insulation, air sealing, Anderson HVAC, Gordon County, GEFA approved contractor, $30000 rebate" />
+        <link rel="canonical" href={`${COMPANY.website}/gefa-rebates`} />
         
         <meta property="og:title" content="Georgia Home Energy Rebates with Anderson" />
         <meta property="og:description" content="Lower bills and boost comfort with Anderson's whole‑home approach. We help you qualify for Georgia HER & HEAR rebates and handle the paperwork. Funds are limited—check eligibility today." />
@@ -190,29 +190,47 @@ const Index = () => {
       <main className="min-h-screen bg-background">
         <Header />
         
-        <HeroSection 
-          onCheckEligibility={scrollToEligibility}
-          onGetEstimate={openEstimateModal}
-        />
+        <section id="hero">
+          <HeroSection 
+            onCheckEligibility={scrollToEligibility}
+            onGetEstimate={openEstimateModal}
+          />
+        </section>
         
-        <TrustBar />
+        <section id="trust-bar">
+          <TrustBar />
+        </section>
         
-        <ProgramsSection />
+        <section id="programs">
+          <ProgramsSection />
+        </section>
         
-        <EligibilitySection />
+        <section id="eligibility">
+          <EligibilitySection />
+        </section>
         
-        <UpgradesSection />
+        <section id="upgrades">
+          <UpgradesSection />
+        </section>
         
-        <ProcessSection />
+        <section id="process">
+          <ProcessSection />
+        </section>
         
-        <ServiceAreaSection />
+        <section id="service-area">
+          <ServiceAreaSection />
+        </section>
         
-        <FAQSection />
+        <section id="faq">
+          <FAQSection />
+        </section>
         
-        <CTASection 
-          onCheckEligibility={scrollToEligibility}
-          onGetEstimate={openEstimateModal}
-        />
+        <section id="cta">
+          <CTASection 
+            onCheckEligibility={scrollToEligibility}
+            onGetEstimate={openEstimateModal}
+          />
+        </section>
 
         <footer className="py-12 bg-accent/30 border-t border-primary/20">
           <div className="container max-w-content mx-auto px-4">
