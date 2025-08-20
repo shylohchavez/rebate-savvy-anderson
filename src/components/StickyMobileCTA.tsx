@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Calculator, Phone } from "lucide-react";
+import { COMPANY } from "@/lib/company";
 
 interface StickyMobileCTAProps {
   onCheckEligibility: () => void;
@@ -21,9 +22,9 @@ export const StickyMobileCTA = ({ onCheckEligibility }: StickyMobileCTAProps) =>
           asChild
           className="flex-1 max-w-[140px] bg-anderson-orange hover:bg-anderson-orange/90 text-white rounded-full text-sm font-semibold"
         >
-          <a href="tel:+17066290749" className="flex items-center gap-2">
+          <a href={`tel:${COMPANY.phone_href}`} className="flex items-center gap-2">
             <Phone className="w-4 h-4" />
-            Call 706‑629‑0749
+            Call {COMPANY.phone_display}
           </a>
         </Button>
       </div>

@@ -2,7 +2,7 @@
 import { Phone, Menu, X, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-// Using the uploaded logo directly
+import { COMPANY } from "@/lib/company";
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -50,7 +50,7 @@ export const Header = () => {
                 FAQ
               </button>
               <a 
-                href="https://www.johnandersonservice.com/contact-us/" 
+                href={`${COMPANY.website}/contact-us/`} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors font-medium"
@@ -61,16 +61,16 @@ export const Header = () => {
             
             <div className="flex items-center gap-2">
               <a 
-                href="mailto:workorders@johnandersonservice.com"
+                href={`mailto:${COMPANY.email}`}
                 className="text-anderson-purple hover:text-anderson-lilac transition-colors text-sm font-medium hidden sm:flex items-center gap-1"
               >
                 <Mail size={16} />
-                workorders@johnandersonservice.com
+                {COMPANY.email}
               </a>
               <div className="text-right mr-4">
                 <p className="text-sm text-muted-foreground">Call for Service</p>
                 <p className="font-semibold text-foreground text-lg">
-                  (706) 629‑0749
+                  {COMPANY.phone_display}
                 </p>
               </div>
             </div>
@@ -81,7 +81,7 @@ export const Header = () => {
               className="rounded-full"
               asChild
             >
-              <a href="tel:+17066290749" className="flex items-center gap-2">
+              <a href={`tel:${COMPANY.phone_href}`} className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
                 Call Now
               </a>
@@ -120,7 +120,7 @@ export const Header = () => {
                 FAQ
               </button>
               <a 
-                href="https://www.johnandersonservice.com/contact-us/" 
+                href={`${COMPANY.website}/contact-us/`} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors font-medium"
@@ -128,7 +128,7 @@ export const Header = () => {
                 Contact
               </a>
               <a 
-                href="mailto:workorders@johnandersonservice.com"
+                href={`mailto:${COMPANY.email}`}
                 className="text-muted-foreground hover:text-primary transition-colors font-medium"
               >
                 Email Us
@@ -139,9 +139,9 @@ export const Header = () => {
                 className="rounded-full w-full"
                 asChild
               >
-                <a href="tel:+17066290749" className="flex items-center justify-center gap-2">
+                <a href={`tel:${COMPANY.phone_href}`} className="flex items-center justify-center gap-2">
                   <Phone className="w-4 h-4" />
-                  Call (706) 629‑0749
+                  Call {COMPANY.phone_display}
                 </a>
               </Button>
             </nav>

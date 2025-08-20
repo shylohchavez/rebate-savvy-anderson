@@ -13,14 +13,12 @@ import { LeadModal } from "@/components/LeadModal";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { Button } from "@/components/ui/button";
 import { Calculator, FileText, Phone } from "lucide-react";
-import andersonLogo from "@/assets/anderson-logo.png";
+import { COMPANY } from "@/lib/company";
 
 // Config constants
 const IS_GEFA_APPROVED = false;
 const PRIMARY_COLOR = "anderson-purple";
 const CTA_TEXT_PRIMARY = "Get a Free Rebate Consultation";
-const PHONE = "706-629-0749";
-const EMAIL = "shyloh@johnandersonservice.com";
 
 const EnergyRebates = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -40,13 +38,13 @@ const EnergyRebates = () => {
   const localBusinessData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://www.johnandersonservice.com/#organization",
-    "name": "Anderson Heating, Air & Insulation",
-    "alternateName": "John Anderson Service Co.",
-    "url": "https://www.johnandersonservice.com",
-    "logo": "https://www.johnandersonservice.com/wp-content/uploads/anderson-web-transparent_logo-color.png",
-    "telephone": `+1-${PHONE.replace(/[^\d]/g, '')}`,
-    "email": EMAIL,
+    "@id": `${COMPANY.website}/#organization`,
+    "name": COMPANY.legal_name,
+    "alternateName": COMPANY.dba,
+    "url": COMPANY.website,
+    "logo": `${COMPANY.website}/wp-content/uploads/anderson-web-transparent_logo-color.png`,
+    "telephone": COMPANY.phone_href,
+    "email": COMPANY.email,
     "serviceType": [
       "Georgia Energy Rebates Consultation",
       "HER Program Guidance", 
@@ -98,13 +96,13 @@ const EnergyRebates = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.johnandersonservice.com"
+        "item": COMPANY.website
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Energy Rebates",
-        "item": "https://www.johnandersonservice.com/energy-rebates"
+        "item": `${COMPANY.website}/energy-rebates`
       }
     ]
   };
@@ -115,12 +113,12 @@ const EnergyRebates = () => {
         <title>Georgia Home Energy Rebates—Made Simple | Anderson Heating, Air & Insulation</title>
         <meta name="description" content="Slash energy bills, boost comfort, and get expert help navigating HER & HEAR rebates. Anderson handles the testing, modeling, and paperwork for Georgia energy rebates." />
         <meta name="keywords" content="Georgia home energy rebates, HER, HEAR, heat pump rebates, insulation rebates, Anderson HVAC, energy savings" />
-        <link rel="canonical" href="https://www.johnandersonservice.com/energy-rebates" />
+        <link rel="canonical" href={`${COMPANY.website}/energy-rebates`} />
         
         <meta property="og:title" content="Georgia Home Energy Rebates—Made Simple" />
         <meta property="og:description" content="Slash energy bills, boost comfort, and let our team handle eligibility, testing, and paperwork." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.johnandersonservice.com/energy-rebates" />
+        <meta property="og:url" content={`${COMPANY.website}/energy-rebates`} />
         
         <script type="application/ld+json">
           {JSON.stringify(localBusinessData)}
@@ -181,9 +179,9 @@ const EnergyRebates = () => {
                   asChild
                   className="min-w-[180px] rounded-full"
                 >
-                  <a href={`tel:+1${PHONE.replace(/[^\d]/g, '')}`} className="flex items-center gap-2">
+                  <a href={`tel:${COMPANY.phone_href}`} className="flex items-center gap-2">
                     <Phone className="w-5 h-5" />
-                    Call {PHONE}
+                    Call {COMPANY.phone_display}
                   </a>
                 </Button>
               </div>
@@ -241,9 +239,9 @@ const EnergyRebates = () => {
                 asChild
                 className="min-w-[180px] rounded-full"
               >
-                <a href={`tel:+1${PHONE.replace(/[^\d]/g, '')}`} className="flex items-center gap-2">
+                <a href={`tel:${COMPANY.phone_href}`} className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Call {PHONE}
+                  Call {COMPANY.phone_display}
                 </a>
               </Button>
             </div>
@@ -258,26 +256,26 @@ const EnergyRebates = () => {
               <div className="text-center md:text-left">
                 <div className="mb-4">
                   <img 
-                    src={andersonLogo} 
+                    src="/lovable-uploads/8ce0adc9-4809-459c-b2fa-5c3761fffc0e.png" 
                     alt="Anderson Heating, Air & Insulation - The Paws-itive Choice" 
                     className="h-24 w-auto mx-auto md:mx-0"
                   />
                 </div>
                 <div className="text-sm text-muted-foreground">
-                  <p className="font-semibold text-foreground mb-2">Anderson Heating, Air & Insulation</p>
-                  <p className="mb-1">DBA John Anderson Service Co.</p>
-                  <p className="mb-2">519 Pine St, Calhoun, GA 30701</p>
+                  <p className="font-semibold text-foreground mb-2">{COMPANY.legal_name}</p>
+                  <p className="mb-1">DBA {COMPANY.dba}</p>
+                  <p className="mb-2">{COMPANY.address}</p>
                   <p className="font-semibold text-lg text-secondary-foreground mb-2">
-                    <a href={`tel:+1${PHONE.replace(/[^\d]/g, '')}`} className="hover:text-primary transition-colors">
-                      ({PHONE})
+                    <a href={`tel:${COMPANY.phone_href}`} className="hover:text-primary transition-colors">
+                      {COMPANY.phone_display}
                     </a>
                   </p>
                   <p>
                     <a 
-                      href={`mailto:${EMAIL}`}
+                      href={`mailto:${COMPANY.email}`}
                       className="text-primary hover:text-primary-light"
                     >
-                      {EMAIL}
+                      {COMPANY.email}
                     </a>
                   </p>
                   <p className="mt-2 text-xs">Licensed & Insured HVAC Contractor</p>

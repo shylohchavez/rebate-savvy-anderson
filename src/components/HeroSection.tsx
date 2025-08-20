@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Phone, Calculator, FileText, Shield, Home, FileCheck, Award, ExternalLink } from "lucide-react";
+import { COMPANY } from "@/lib/company";
 
 interface HeroSectionProps {
   onCheckEligibility: () => void;
@@ -101,9 +102,9 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
               asChild
               className="min-w-[180px] rounded-full"
             >
-              <a href="tel:+17066290749" className="flex items-center gap-2">
+              <a href={`tel:${COMPANY.phone_href}`} className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
-                Call 706-629-0749
+                Call {COMPANY.phone_display}
               </a>
             </Button>
           </div>

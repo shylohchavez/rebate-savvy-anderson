@@ -11,6 +11,7 @@ import { ServiceAreaSection } from "@/components/ServiceAreaSection";
 import { LeadModal } from "@/components/LeadModal";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { Helmet } from "react-helmet-async";
+import { COMPANY } from "@/lib/company";
 
 const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -30,14 +31,14 @@ const Index = () => {
   const localBusinessData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://www.johnandersonservice.com/#organization",
-    "name": "Anderson Heating, Air & Insulation",
-    "alternateName": "John Anderson Service Co.",
-    "url": "https://www.johnandersonservice.com",
-    "logo": "https://www.johnandersonservice.com/wp-content/uploads/anderson-web-transparent_logo-color.png",
-    "image": "https://www.johnandersonservice.com/wp-content/uploads/anderson-web-transparent_logo-color.png",
-    "telephone": "+1-706-629-0749",
-    "email": "workorders@johnandersonservice.com",
+    "@id": `${COMPANY.website}/#organization`,
+    "name": COMPANY.legal_name,
+    "alternateName": COMPANY.dba,
+    "url": COMPANY.website,
+    "logo": `${COMPANY.website}/wp-content/uploads/anderson-web-transparent_logo-color.png`,
+    "image": `${COMPANY.website}/wp-content/uploads/anderson-web-transparent_logo-color.png`,
+    "telephone": COMPANY.phone_href,
+    "email": COMPANY.email,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "519 Pine St",
@@ -51,9 +52,7 @@ const Index = () => {
       "latitude": 34.5023,
       "longitude": -84.9516
     },
-    "serviceArea": [
-      "Gordon", "Bartow", "Floyd", "Murray", "Whitfield", "Chattooga", "Pickens", "Cherokee", "Walker"
-    ],
+    "serviceArea": COMPANY.service_counties_gefa,
     "serviceType": [
       "HVAC Installation",
       "Heat Pump Installation", 
@@ -67,32 +66,25 @@ const Index = () => {
   const organizationData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Anderson Heating, Air & Insulation",
-    "alternateName": "John Anderson Service Co.",
-    "url": "https://www.johnandersonservice.com",
-    "logo": "https://www.johnandersonservice.com/wp-content/uploads/anderson-web-transparent_logo-color.png",
-    "telephone": "+1-706-629-0749",
-    "email": "workorders@johnandersonservice.com",
-    "areaServed": [
-      {"@type": "AdministrativeArea", "name": "Gordon County, GA"},
-      {"@type": "AdministrativeArea", "name": "Bartow County, GA"},
-      {"@type": "AdministrativeArea", "name": "Floyd County, GA"},
-      {"@type": "AdministrativeArea", "name": "Murray County, GA"},
-      {"@type": "AdministrativeArea", "name": "Whitfield County, GA"},
-      {"@type": "AdministrativeArea", "name": "Chattooga County, GA"},
-      {"@type": "AdministrativeArea", "name": "Pickens County, GA"},
-      {"@type": "AdministrativeArea", "name": "Cherokee County, GA"},
-      {"@type": "AdministrativeArea", "name": "Walker County, GA"}
-    ]
+    "name": COMPANY.legal_name,
+    "alternateName": COMPANY.dba,
+    "url": COMPANY.website,
+    "logo": `${COMPANY.website}/wp-content/uploads/anderson-web-transparent_logo-color.png`,
+    "telephone": COMPANY.phone_href,
+    "email": COMPANY.email,
+    "areaServed": COMPANY.service_counties_gefa.map(county => ({
+      "@type": "AdministrativeArea", 
+      "name": `${county} County, GA`
+    }))
   };
 
   const websiteData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Anderson Heating, Air & Insulation",
-    "url": "https://www.johnandersonservice.com",
+    "name": COMPANY.legal_name,
+    "url": COMPANY.website,
     "publisher": {
-      "@id": "https://www.johnandersonservice.com/#organization"
+      "@id": `${COMPANY.website}/#organization`
     }
   };
 
@@ -102,7 +94,7 @@ const Index = () => {
       "@type": "Service",
       "name": "Heat Pump Installation",
       "provider": {
-        "@id": "https://www.johnandersonservice.com/#organization"
+        "@id": `${COMPANY.website}/#organization`
       },
       "areaServed": "Northwest Georgia",
       "description": "Professional heat pump installation with Georgia energy rebate guidance"
@@ -112,7 +104,7 @@ const Index = () => {
       "@type": "Service",
       "name": "Insulation & Air Sealing",
       "provider": {
-        "@id": "https://www.johnandersonservice.com/#organization"
+        "@id": `${COMPANY.website}/#organization`
       },
       "areaServed": "Northwest Georgia",
       "description": "Whole-home insulation and air sealing services for energy efficiency"
@@ -122,7 +114,7 @@ const Index = () => {
       "@type": "Service", 
       "name": "Home Energy Assessment",
       "provider": {
-        "@id": "https://www.johnandersonservice.com/#organization"
+        "@id": `${COMPANY.website}/#organization`
       },
       "areaServed": "Northwest Georgia",
       "description": "Comprehensive home energy audits and efficiency recommendations"
@@ -157,7 +149,7 @@ const Index = () => {
       {"@type":"Question","name":"Are manufactured homes eligible?","acceptedAnswer":{"@type":"Answer","text":"Yes, if the home is your primary residence in Georgia."}},
       {"@type":"Question","name":"What will be on my final invoice?","acceptedAnswer":{"@type":"Answer","text":"Line-item equipment and labor, model numbers, dates, address, total cost, rebate amount, testing/modeling, and other incentives. You sign and date it."}},
       {"@type":"Question","name":"Are funds limited?","acceptedAnswer":{"@type":"Answer","text":"Yes. Georgia received a set amount for HER and HEAR, and funds are subject to availability."}},
-      {"@type":"Question","name":"How do I start?","acceptedAnswer":{"@type":"Answer","text":"Call (706) 629-0749 or visit johnandersonservice.com to schedule your no-cost estimate."}}
+      {"@type":"Question","name":"How do I start?","acceptedAnswer":{"@type":"Answer","text":`Call ${COMPANY.phone_display} or visit ${COMPANY.website.replace('https://', '')} to schedule your no-cost estimate.`}}
     ]
   };
 
@@ -165,15 +157,15 @@ const Index = () => {
     <>
       <Helmet>
         <title>Georgia Home Energy Rebates (HER & HEAR) | Anderson Heating, Air & Insulation</title>
-        <meta name="description" content="Cut bills and boost comfort with Anderson's whole-home approach. We guide Georgia HER & HEAR rebates and handle the hard parts. Funds are limited—check eligibility today." />
+        <meta name="description" content="Lower bills and boost comfort with Anderson's whole‑home approach. We help you qualify for Georgia HER & HEAR rebates and handle the paperwork. Funds are limited—check eligibility today." />
         <meta name="keywords" content="Georgia home energy rebates, HER, HEAR, heat pump installation, insulation, air sealing, Anderson HVAC, Gordon County" />
-        <link rel="canonical" href="https://www.johnandersonservice.com/hear-her/" />
+        <link rel="canonical" href={`${COMPANY.website}/hear-her/`} />
         
         <meta property="og:title" content="Georgia Home Energy Rebates with Anderson" />
-        <meta property="og:description" content="Lower bills. More comfort. Rebates made simple with Anderson. Georgia confirms eligibility; we guide the steps." />
+        <meta property="og:description" content="Lower bills and boost comfort with Anderson's whole‑home approach. We help you qualify for Georgia HER & HEAR rebates and handle the paperwork. Funds are limited—check eligibility today." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.johnandersonservice.com/hear-her/" />
-        <meta property="og:image" content="https://www.johnandersonservice.com/wp-content/uploads/anderson-web-transparent_logo-color.png" />
+        <meta property="og:url" content={`${COMPANY.website}/hear-her/`} />
+        <meta property="og:image" content={`${COMPANY.website}/wp-content/uploads/anderson-web-transparent_logo-color.png`} />
         
         <script type="application/ld+json">
           {JSON.stringify(localBusinessData)}
@@ -232,20 +224,20 @@ const Index = () => {
                   />
                 </div>
                 <div className="text-sm text-muted-foreground">
-                  <p className="font-semibold text-foreground mb-2">Anderson Heating, Air & Insulation</p>
-                  <p className="mb-1">DBA John Anderson Service Co.</p>
-                   <p className="mb-2">519 Pine St, Calhoun, GA 30701</p>
+                  <p className="font-semibold text-foreground mb-2">{COMPANY.legal_name}</p>
+                  <p className="mb-1">DBA {COMPANY.dba}</p>
+                   <p className="mb-2">{COMPANY.address}</p>
                    <p className="font-semibold text-lg text-secondary-foreground mb-2">
-                     <a href="tel:+17066290749" className="hover:text-primary transition-colors">
-                       (706) 629‑0749
+                     <a href={`tel:${COMPANY.phone_href}`} className="hover:text-primary transition-colors">
+                       {COMPANY.phone_display}
                      </a>
                    </p>
                    <p>
                       <a 
-                        href="mailto:workorders@johnandersonservice.com"
+                        href={`mailto:${COMPANY.email}`}
                         className="text-primary hover:text-primary-light"
                       >
-                        workorders@johnandersonservice.com
+                        {COMPANY.email}
                       </a>
                    </p>
                   <p className="mt-2 text-xs">Licensed & Insured HVAC Contractor</p>
