@@ -21,7 +21,7 @@ export const Header = () => {
           {/* Anderson Logo */}
           <div className="flex items-center">
             <img 
-              src="/anderson-logo.png" 
+              src="/images/anderson-logo-mascot.png" 
               alt="Anderson Heating, Air & Insulation - The Paws-itive Choice" 
               className="h-16 w-auto"
             />
