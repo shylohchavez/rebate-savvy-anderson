@@ -2,7 +2,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Phone, Calculator, FileText, Shield, Home, FileCheck, Award, ExternalLink } from "lucide-react";
-import andersonLogo from "@/assets/anderson-logo.png";
 
 interface HeroSectionProps {
   onCheckEligibility: () => void;
@@ -29,7 +28,7 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
             <div className="flex-shrink-0 flex justify-center lg:justify-end">
               <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-soft border border-anderson-purple/10 max-w-[200px]">
                 <img 
-                  src={andersonLogo} 
+                  src="/lovable-uploads/8ce0adc9-4809-459c-b2fa-5c3761fffc0e.png" 
                   alt="Anderson Heating, Air & Insulation - The Paws-itive Choice" 
                   className="h-24 w-auto mx-auto"
                 />
