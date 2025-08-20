@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
+import { TrustBar } from "@/components/TrustBar";
 import { ProgramsSection } from "@/components/ProgramsSection";
 import { EligibilitySection } from "@/components/EligibilitySection";
 import { UpgradesSection } from "@/components/UpgradesSection";
@@ -156,10 +157,10 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Georgia Home Energy Rebates (HER & HEAR) | Anderson Heating, Air & Insulation</title>
-        <meta name="description" content="Lower bills and boost comfort with Anderson's whole‑home approach. We help you qualify for Georgia HER & HEAR rebates and handle the paperwork. Funds are limited—check eligibility today." />
-        <meta name="keywords" content="Georgia home energy rebates, HER, HEAR, heat pump installation, insulation, air sealing, Anderson HVAC, Gordon County" />
-        <link rel="canonical" href={`${COMPANY.website}/hear-her/`} />
+        <title>GEFA Home Energy Rebate Experts in North GA | John Anderson Service</title>
+        <meta name="description" content="Your GEFA-approved contractor for HER & HEAR rebates in North Georgia. We handle the paperwork for heat pumps, insulation, and more. Maximize your savings up to $14,000." />
+        <meta name="keywords" content="Georgia home energy rebates, HER, HEAR, heat pump installation, insulation, air sealing, Anderson HVAC, Gordon County, GEFA approved contractor" />
+        <link rel="canonical" href={`${COMPANY.website}/`} />
         
         <meta property="og:title" content="Georgia Home Energy Rebates with Anderson" />
         <meta property="og:description" content="Lower bills and boost comfort with Anderson's whole‑home approach. We help you qualify for Georgia HER & HEAR rebates and handle the paperwork. Funds are limited—check eligibility today." />
@@ -193,6 +194,8 @@ const Index = () => {
           onCheckEligibility={scrollToEligibility}
           onGetEstimate={openEstimateModal}
         />
+        
+        <TrustBar />
         
         <ProgramsSection />
         
@@ -272,10 +275,10 @@ const Index = () => {
                     </p>
                   </div>
                 </div>
-                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                  <strong className="text-foreground">Compliance:</strong> Anderson is a participating contractor. Customers complete their own application and income verification; 
-                  Georgia reviews and approves rebates. We provide guidance, detailed invoices, photos, and reports to make it easy.
-                </p>
+                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                   <strong className="text-foreground">Compliance:</strong> Anderson is a GEFA-approved participating contractor. Customers complete their own application and income verification; 
+                   Georgia reviews and approves rebates. We provide guidance, detailed invoices, photos, and reports to make it easy.
+                 </p>
                 <p className="text-xs text-muted-foreground">
                   Last updated: {new Date().toLocaleDateString()}
                 </p>

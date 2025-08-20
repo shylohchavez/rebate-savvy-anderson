@@ -18,11 +18,10 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-8">
             <div className="flex-1">
               <h1 className="text-hero font-bold mb-6 text-foreground text-center">
-                A Cozier Home, Lower Bills—Handled by Anderson
+                Georgia's Home Energy Rebates Are Complicated. We Make Them Simple.
               </h1>
               <p className="text-body text-muted-foreground mb-6 leading-relaxed text-center">
-                We fix comfort and energy waste the right way—insulation, air sealing, and high‑efficiency heat pumps. 
-                Georgia's Home Energy Rebates can help lower your cost. We guide your steps; <strong className="text-anderson-purple">the State confirms eligibility</strong>.
+                As a GEFA-approved contractor with over 45 years of whole-home expertise, John Anderson Service handles all the paperwork, testing, and compliance so you can maximize your savings—up to $14,000.
               </p>
             </div>
             
@@ -82,10 +81,10 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
               variant="anderson" 
               size="xl"
               onClick={onCheckEligibility}
-              className="min-w-[240px] rounded-full"
+              className="min-w-[280px] rounded-full"
             >
               <Calculator className="w-5 h-5" />
-              Check My Rebate Eligibility
+              Schedule Your Free Rebate Eligibility Assessment
             </Button>
             <Button 
               variant="anderson-secondary" 

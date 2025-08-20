@@ -110,8 +110,8 @@ const EnergyRebates = () => {
   return (
     <>
       <Helmet>
-        <title>Georgia Home Energy Rebates—Made Simple | Anderson Heating, Air & Insulation</title>
-        <meta name="description" content="Slash energy bills, boost comfort, and get expert help navigating HER & HEAR rebates. Anderson handles the testing, modeling, and paperwork for Georgia energy rebates." />
+        <title>GEFA Home Energy Rebate Experts in North GA | John Anderson Service</title>
+        <meta name="description" content="Your GEFA-approved contractor for HER & HEAR rebates in North Georgia. We handle the paperwork for heat pumps, insulation, and more. Maximize your savings up to $14,000." />
         <meta name="keywords" content="Georgia home energy rebates, HER, HEAR, heat pump rebates, insulation rebates, Anderson HVAC, energy savings" />
         <link rel="canonical" href={`${COMPANY.website}/energy-rebates`} />
         
