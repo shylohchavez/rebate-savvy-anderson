@@ -28,7 +28,7 @@ export const HeroSection = ({ onCheckEligibility, onGetEstimate }: HeroSectionPr
             <div className="flex-shrink-0 flex justify-center lg:justify-end">
               <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-soft border border-anderson-purple/10 max-w-[200px]">
                 <img 
-                  src="/lovable-uploads/ccc9e78e-7031-4281-aa74-3aa19945fde7.png" 
+                  src="/anderson-logo.png" 
                   alt="Anderson Heating, Air & Insulation - The Paws-itive Choice" 
                   className="h-24 w-auto mx-auto"
                 />

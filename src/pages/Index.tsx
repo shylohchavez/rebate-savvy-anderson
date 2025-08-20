@@ -226,7 +226,7 @@ const Index = () => {
               <div className="text-center md:text-left">
                 <div className="mb-4">
                   <img 
-                    src="/lovable-uploads/ccc9e78e-7031-4281-aa74-3aa19945fde7.png" 
+                    src="/anderson-logo.png" 
                     alt="Anderson Heating, Air & Insulation - The Paws-itive Choice" 
                     className="h-24 w-auto mx-auto md:mx-0"
                   />
