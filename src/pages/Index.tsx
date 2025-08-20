@@ -11,6 +11,7 @@ import { ServiceAreaSection } from "@/components/ServiceAreaSection";
 import { LeadModal } from "@/components/LeadModal";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { Helmet } from "react-helmet-async";
+import andersonLogo from "@/assets/anderson-logo.png";
 
 const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -226,7 +227,7 @@ const Index = () => {
               <div className="text-center md:text-left">
                 <div className="mb-4">
                   <img 
-                    src="/anderson-logo.png" 
+                    src={andersonLogo} 
                     alt="Anderson Heating, Air & Insulation - The Paws-itive Choice" 
                     className="h-24 w-auto mx-auto md:mx-0"
                   />

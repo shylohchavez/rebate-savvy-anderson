@@ -13,6 +13,7 @@ import { LeadModal } from "@/components/LeadModal";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { Button } from "@/components/ui/button";
 import { Calculator, FileText, Phone } from "lucide-react";
+import andersonLogo from "@/assets/anderson-logo.png";
 
 // Config constants
 const IS_GEFA_APPROVED = false;
@@ -257,7 +258,7 @@ const EnergyRebates = () => {
               <div className="text-center md:text-left">
                 <div className="mb-4">
                   <img 
-                    src="/anderson-logo.png" 
+                    src={andersonLogo} 
                     alt="Anderson Heating, Air & Insulation - The Paws-itive Choice" 
                     className="h-24 w-auto mx-auto md:mx-0"
                   />
