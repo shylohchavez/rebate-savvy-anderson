@@ -257,7 +257,7 @@ const EnergyRebates = () => {
               <div className="text-center md:text-left">
                 <div className="mb-4">
                   <img 
-                    src="/images/anderson-logo-mascot.png" 
+                    src="/lovable-uploads/4675909d-27e1-4c3c-b406-349f5eb1342a.png" 
                     alt="Anderson Heating, Air & Insulation - The Paws-itive Choice" 
                     className="h-24 w-auto mx-auto md:mx-0"
                   />
