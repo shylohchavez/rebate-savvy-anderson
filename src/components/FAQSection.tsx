@@ -14,7 +14,7 @@ export const FAQSection = () => {
             <a href="mailto:workorders@johnandersonservice.com" className="text-primary hover:underline">
               workorders@johnandersonservice.com
             </a>
-            . We serve Gordon, Bartow, Floyd, Murray, Whitfield, Chattooga, Pickens, Cherokee, and Walker counties in North Georgia.
+            . We serve 47 specific counties in North Georgia (see service area question below for full list).
           </p>
 
           {/* ELIGIBILITY & INCOME */}
@@ -319,6 +319,16 @@ export const FAQSection = () => {
             <h3 className="text-2xl font-bold mb-6 text-anderson-purple">Why Anderson</h3>
             
             <div className="space-y-4">
+              <details className="bg-card shadow-soft rounded-lg border border-primary/20 p-6">
+                <summary className="text-lg font-semibold cursor-pointer hover:text-primary transition-colors">
+                  Which counties do you serve for the GEFA rebate programs?
+                </summary>
+                <div className="mt-4 text-muted-foreground leading-relaxed">
+                  <p className="mb-3">Our GEFA rebate services are exclusively available to homeowners within a specific 47-county region in North Georgia. We do not service all GEFA-eligible counties in the state.</p>
+                  <p>Our service area includes: Banks, Barrow, Bartow, Carroll, Catoosa, Chattooga, Cherokee, Clarke, Clayton, Cobb, Coweta, Dade, Dawson, DeKalb, Douglas, Elbert, Fannin, Fayette, Floyd, Forsyth, Franklin, Fulton, Gilmer, Gordon, Gwinnett, Habersham, Hall, Haralson, Hart, Heard, Henry, Jackson, Lumpkin, Madison, Murray, Newton, Oconee, Paulding, Pickens, Rockdale, Stephens, Towns, Troup, Walker, Walton, White, and Whitfield counties.</p>
+                </div>
+              </details>
+
               <details className="bg-card shadow-soft rounded-lg border border-primary/20 p-6">
                 <summary className="text-lg font-semibold cursor-pointer hover:text-primary transition-colors">
                   What does Anderson do for me?
