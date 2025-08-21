@@ -1,0 +1,85 @@
+{
+  "version": "0.4",
+  "title": "Anderson GEFA Rebates Landing Page",
+  "type": "page",
+  "author": "Anderson HVAC",
+  "generator": "Elementor",
+  "image": "",
+  "description": "Complete Georgia Energy Rebates landing page with compliance content",
+  "tags": [],
+  "is_pro": false,
+  "dependency": [],
+  "content": [
+    {
+      "id": "header-section",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#FFFFFF",
+        "border_border": "solid",
+        "border_width": {
+          "unit": "px",
+          "top": "0",
+          "right": "0", 
+          "bottom": "1",
+          "left": "0"
+        },
+        "border_color": "rgba(81,45,109,0.1)",
+        "padding": {
+          "unit": "px",
+          "top": "20",
+          "right": "20",
+          "bottom": "20",
+          "left": "20"
+        }
+      },
+      "elements": [
+        {
+          "id": "header-content",
+          "elType": "column",
+          "settings": {
+            "width": "100"
+          },
+          "elements": [
+            {
+              "id": "shortcode-widget",
+              "elType": "widget",
+              "widgetType": "shortcode",
+              "settings": {
+                "shortcode": "[anderson_hear_her]"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "schema-section",
+      "elType": "section",
+      "settings": {
+        "hide_desktop": "yes",
+        "hide_tablet": "yes", 
+        "hide_mobile": "yes"
+      },
+      "elements": [
+        {
+          "id": "schema-column",
+          "elType": "column",
+          "settings": {
+            "width": "100"
+          },
+          "elements": [
+            {
+              "id": "schema-html",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<!-- Schema markup is automatically added by the Anderson HEAR/HER plugin when the shortcode is present -->"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
