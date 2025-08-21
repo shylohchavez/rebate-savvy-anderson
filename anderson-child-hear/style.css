@@ -1,0 +1,380 @@
+/*
+Theme Name: Anderson Child Theme - HEAR/HER
+Description: Child theme for Anderson Heating, Air & Insulation GEFA rebate landing page
+Author: Anderson Heating, Air & Insulation
+Template: twentytwentyfour
+Version: 1.0.0
+Text Domain: anderson-child-hear
+*/
+
+/* Import parent theme styles */
+@import url("../twentytwentyfour/style.css");
+
+/* Anderson Brand Colors per Logo Guide */
+:root {
+  /* Anderson Official Brand Colors */
+  --anderson-purple: #512D6D;
+  --anderson-orange: #D14129;
+  --anderson-lilac: #9069CD;
+  --anderson-cream: #EFDBB2;
+  --ink: #101820;
+  --charcoal: #2A2A29;
+  --white: #FFFFFF;
+  
+  /* Design tokens */
+  --radius: 0.875rem;
+  --shadow-soft: 0 2px 8px rgba(16, 24, 32, 0.08);
+  --shadow-medium: 0 4px 16px rgba(16, 24, 32, 0.12);
+  --shadow-strong: 0 8px 32px rgba(16, 24, 32, 0.16);
+  --shadow-glow: 0 0 24px rgba(81, 45, 109, 0.2);
+  
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, #ffffff 0%, #fefcf7 70%);
+  --gradient-trust: linear-gradient(180deg, #ffffff 0%, #fefcf9 100%);
+  --gradient-cta: linear-gradient(135deg, #d14129 0%, #b8371f 100%);
+  
+  /* Typography */
+  --font-hero: clamp(2.25rem, 4.5vw, 3.75rem);
+  --font-h2: clamp(1.75rem, 3vw, 2.5rem);
+  --font-h3: clamp(1.375rem, 2.5vw, 1.625rem);
+  --font-body: clamp(1rem, 1.5vw, 1.125rem);
+  
+  /* Spacing */
+  --spacing-section: clamp(2rem, 5vw, 4rem);
+  --spacing-content: clamp(1rem, 2.5vw, 2rem);
+  --max-width: 1200px;
+  
+  /* Transitions */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Override theme defaults for Anderson branding */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: var(--font-body);
+  line-height: 1.6;
+  color: var(--charcoal);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', system-ui, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+/* Anderson specific page styling */
+.anderson-gefa-page {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.anderson-gefa-page h1 {
+  font-size: var(--font-hero);
+  color: var(--anderson-purple);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.anderson-gefa-page h2 {
+  font-size: var(--font-h2);
+  color: var(--anderson-purple);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.anderson-gefa-page h3 {
+  font-size: var(--font-h3);
+  color: var(--anderson-purple);
+  margin-bottom: 1rem;
+}
+
+/* Button styles */
+.btn-anderson {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--anderson-purple);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-anderson:hover {
+  background-color: var(--anderson-lilac);
+  color: var(--white);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.btn-anderson-secondary {
+  background-color: var(--anderson-orange);
+  color: var(--white);
+}
+
+.btn-anderson-secondary:hover {
+  background-color: #b8371f;
+  color: var(--white);
+}
+
+.btn-anderson-ghost {
+  background-color: transparent;
+  color: var(--anderson-purple);
+  border: 2px solid var(--anderson-purple);
+}
+
+.btn-anderson-ghost:hover {
+  background-color: var(--anderson-purple);
+  color: var(--white);
+}
+
+/* Card styles */
+.anderson-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(81, 45, 109, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: var(--transition-smooth);
+}
+
+.anderson-card:hover {
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-2px);
+}
+
+/* Section backgrounds */
+.bg-anderson-cream {
+  background-color: var(--anderson-cream);
+  padding: var(--spacing-section) 0;
+}
+
+.bg-gradient-hero {
+  background: var(--gradient-hero);
+  padding: var(--spacing-section) 0;
+}
+
+.bg-gradient-trust {
+  background: var(--gradient-trust);
+  padding: var(--spacing-section) 0;
+}
+
+/* Responsive grid */
+.anderson-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .anderson-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .anderson-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* County grid specific styling */
+.county-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .county-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .county-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .county-grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+.county-item {
+  background: rgba(239, 219, 178, 0.5);
+  border-radius: var(--radius);
+  padding: 0.5rem;
+  text-align: center;
+  border: 1px solid rgba(81, 45, 109, 0.1);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.county-item:hover {
+  background: rgba(239, 219, 178, 0.7);
+}
+
+/* FAQ styling */
+.anderson-faq details {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid rgba(81, 45, 109, 0.2);
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.anderson-faq summary {
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--anderson-purple);
+  transition: var(--transition-smooth);
+}
+
+.anderson-faq summary:hover {
+  background: rgba(239, 219, 178, 0.3);
+}
+
+.anderson-faq details[open] summary {
+  border-bottom: 1px solid rgba(81, 45, 109, 0.1);
+}
+
+.anderson-faq .faq-content {
+  padding: 1rem;
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+
+/* Income table styling */
+.income-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  margin: 1rem 0;
+}
+
+.income-table th,
+.income-table td {
+  padding: 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(81, 45, 109, 0.1);
+}
+
+.income-table th {
+  background: var(--anderson-cream);
+  color: var(--anderson-purple);
+  font-weight: 600;
+}
+
+.income-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Alert boxes */
+.alert {
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin: 1rem 0;
+}
+
+.alert-warning {
+  background: #fef3cd;
+  border: 1px solid #f9c23c;
+  color: #8b5a00;
+}
+
+.alert-info {
+  background: #e7f3ff;
+  border: 1px solid #6bb6ff;
+  color: #0056b3;
+}
+
+.alert-compliance {
+  background: rgba(239, 219, 178, 0.3);
+  border: 1px solid var(--anderson-orange);
+  color: var(--charcoal);
+}
+
+/* Mobile sticky CTA (only on small screens) */
+@media (max-width: 767px) {
+  .sticky-mobile-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(81, 45, 109, 0.2);
+    padding: 0.75rem;
+    z-index: 1000;
+    box-shadow: var(--shadow-strong);
+  }
+  
+  .sticky-mobile-cta .btn-anderson {
+    flex: 1;
+    max-width: 180px;
+    font-size: 0.875rem;
+  }
+  
+  .sticky-mobile-cta .btn-anderson-secondary {
+    flex: 1;
+    max-width: 140px;
+    font-size: 0.875rem;
+  }
+}
+
+/* Ensure content doesn't hide behind sticky bar on mobile */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 80px;
+  }
+}
+
+/* Trust badges */
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--anderson-cream);
+  color: var(--anderson-purple);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(81, 45, 109, 0.2);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0.25rem;
+}
+
+/* Utility classes */
+.text-center { text-align: center; }
+.text-anderson-purple { color: var(--anderson-purple); }
+.text-anderson-orange { color: var(--anderson-orange); }
+.text-muted { color: #6b7280; }
+
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+
+.p-4 { padding: 1rem; }
+.p-6 { padding: 1.5rem; }
+
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.gap-2 { gap: 0.5rem; }
+.gap-4 { gap: 1rem; }
