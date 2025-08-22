@@ -14,7 +14,48 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      leads: {
+        Row: {
+          address: string
+          consent: boolean
+          county: string
+          created_at: string
+          email: string
+          household_size: number
+          id: string
+          income: number
+          name: string
+          phone: string
+          updated_at: string
+        }
+        Insert: {
+          address: string
+          consent?: boolean
+          county: string
+          created_at?: string
+          email: string
+          household_size: number
+          id?: string
+          income: number
+          name: string
+          phone: string
+          updated_at?: string
+        }
+        Update: {
+          address?: string
+          consent?: boolean
+          county?: string
+          created_at?: string
+          email?: string
+          household_size?: number
+          id?: string
+          income?: number
+          name?: string
+          phone?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
