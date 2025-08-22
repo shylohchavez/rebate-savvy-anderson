@@ -21,6 +21,7 @@ export type Database = {
           county: string
           created_at: string
           email: string
+          heating_system: string | null
           household_size: number
           id: string
           income: number
@@ -34,6 +35,7 @@ export type Database = {
           county: string
           created_at?: string
           email: string
+          heating_system?: string | null
           household_size: number
           id?: string
           income: number
@@ -47,6 +49,7 @@ export type Database = {
           county?: string
           created_at?: string
           email?: string
+          heating_system?: string | null
           household_size?: number
           id?: string
           income?: number

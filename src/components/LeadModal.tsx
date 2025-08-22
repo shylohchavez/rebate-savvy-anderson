@@ -27,6 +27,7 @@ export const LeadModal = ({ isOpen, onClose }: LeadModalProps) => {
     county: "",
     household: "",
     income: "",
+    heating_system: "",
     consent: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -48,6 +49,7 @@ export const LeadModal = ({ isOpen, onClose }: LeadModalProps) => {
           county: formData.county,
           household_size: parseInt(formData.household),
           income: parseInt(formData.income),
+          heating_system: formData.heating_system,
           consent: formData.consent
         });
 
@@ -71,6 +73,7 @@ export const LeadModal = ({ isOpen, onClose }: LeadModalProps) => {
         county: "",
         household: "",
         income: "",
+        heating_system: "",
         consent: false
       });
     } catch (error) {
@@ -187,6 +190,21 @@ export const LeadModal = ({ isOpen, onClose }: LeadModalProps) => {
               onChange={(e) => handleInputChange("income", e.target.value)}
               required
             />
+          </div>
+
+          <div className="space-y-2 md:col-span-2">
+            <Label htmlFor="heating-system">Current Heating/Cooling System *</Label>
+            <Select value={formData.heating_system} onValueChange={(value) => handleInputChange("heating_system", value)}>
+              <SelectTrigger>
+                <SelectValue placeholder="Select your current system..." />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="gas">Have gas heating/cooling</SelectItem>
+                <SelectItem value="electric">Have electric heating/cooling</SelectItem>
+                <SelectItem value="none">Never had central heating and air</SelectItem>
+                <SelectItem value="other">Other system</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
 
           <div className="md:col-span-2 flex items-center space-x-2">
