@@ -11,6 +11,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 interface LeadModalProps {
   isOpen: boolean;
@@ -35,28 +36,53 @@ export const LeadModal = ({ isOpen, onClose }: LeadModalProps) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      // Submit to Supabase
+      const { error } = await supabase
+        .from('leads')
+        .insert({
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          address: formData.address,
+          county: formData.county,
+          household_size: parseInt(formData.household),
+          income: parseInt(formData.income),
+          consent: formData.consent
+        });
 
-    toast({
-      title: "Thanks for your interest!",
-      description: "We'll contact you shortly to discuss your rebate options and schedule your no-cost estimate.",
-    });
+      if (error) {
+        throw error;
+      }
 
-    setIsSubmitting(false);
-    onClose();
-    
-    // Reset form
-    setFormData({
-      name: "",
-      phone: "",
-      email: "",
-      address: "",
-      county: "",
-      household: "",
-      income: "",
-      consent: false
-    });
+      toast({
+        title: "Thanks for your interest!",
+        description: "We'll contact you shortly to discuss your rebate options and schedule your no-cost estimate.",
+      });
+
+      onClose();
+      
+      // Reset form
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        address: "",
+        county: "",
+        household: "",
+        income: "",
+        consent: false
+      });
+    } catch (error) {
+      console.error('Error submitting lead:', error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or call us directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string | boolean) => {
@@ -123,8 +149,16 @@ export const LeadModal = ({ isOpen, onClose }: LeadModalProps) => {
                 <SelectValue placeholder="Select..." />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="gordon">Gordon County</SelectItem>
-                <SelectItem value="other">Other Georgia County</SelectItem>
+                <SelectItem value="Gordon">Gordon County</SelectItem>
+                <SelectItem value="Bartow">Bartow County</SelectItem>
+                <SelectItem value="Floyd">Floyd County</SelectItem>
+                <SelectItem value="Murray">Murray County</SelectItem>
+                <SelectItem value="Whitfield">Whitfield County</SelectItem>
+                <SelectItem value="Chattooga">Chattooga County</SelectItem>
+                <SelectItem value="Pickens">Pickens County</SelectItem>
+                <SelectItem value="Cherokee">Cherokee County</SelectItem>
+                <SelectItem value="Walker">Walker County</SelectItem>
+                <SelectItem value="Other GA County">Other Georgia County</SelectItem>
               </SelectContent>
             </Select>
           </div>
