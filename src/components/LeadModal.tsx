@@ -12,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import ReCAPTCHA from "react-google-recaptcha";
 
 interface LeadModalProps {
   isOpen: boolean;
@@ -31,10 +32,21 @@ export const LeadModal = ({ isOpen, onClose }: LeadModalProps) => {
     consent: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!recaptchaValue) {
+      toast({
+        title: "Please complete the captcha",
+        description: "Please verify that you are not a robot.",
+        variant: "destructive"
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
 
     try {
@@ -76,6 +88,7 @@ export const LeadModal = ({ isOpen, onClose }: LeadModalProps) => {
         heating_system: "",
         consent: false
       });
+      setRecaptchaValue(null);
     } catch (error) {
       console.error('Error submitting lead:', error);
       toast({
@@ -207,6 +220,14 @@ export const LeadModal = ({ isOpen, onClose }: LeadModalProps) => {
             </Select>
           </div>
 
+          <div className="md:col-span-2">
+            <ReCAPTCHA
+              sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+              onChange={setRecaptchaValue}
+              onExpired={() => setRecaptchaValue(null)}
+            />
+          </div>
+
           <div className="md:col-span-2 flex items-center space-x-2">
             <Checkbox
               id="consent"
@@ -223,7 +244,7 @@ export const LeadModal = ({ isOpen, onClose }: LeadModalProps) => {
             <Button type="button" variant="outline" onClick={onClose}>
               Cancel
             </Button>
-            <Button type="submit" disabled={isSubmitting || !formData.consent}>
+            <Button type="submit" disabled={isSubmitting || !formData.consent || !recaptchaValue}>
               {isSubmitting ? "Submitting..." : "Submit"}
             </Button>
           </div>
